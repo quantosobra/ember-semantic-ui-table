@@ -1,27 +1,30 @@
 # ember-semantic-ui-table
 
-This README outlines the details of collaborating on this Ember addon.
+[![Build Status](https://travis-ci.org/quantosobra/ember-semantic-ui-table.svg)](https://travis-ci.org/quantosobra/ember-semantic-ui-table)
+[![npm version](https://badge.fury.io/js/ember-semantic-ui-table.svg)](http://badge.fury.io/js/ember-semantic-ui-table)
+[![Code Climate](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table/badges/gpa.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table)
+[![Test Coverage](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table/badges/coverage.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table/coverage)
+[![Dependency Status](https://david-dm.org/quantosobra/ember-semantic-ui-table.svg)](https://david-dm.org/quantosobra/ember-semantic-ui-table)
+
+## Features
+
+Semantic UI styled tables for Ember.
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd ember-semantic-ui-table`
-* `npm install`
-* `bower install`
+```
+ember install ember-semantic-ui-table
+```
 
-## Running
+## Helpful Links
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+- ### [Live Demo](http://quantosobra.github.io/ember-semantic-ui-table)
 
-## Running Tests
+- ### [Changelog](CHANGELOG.md)
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+## Looking for help?
 
-## Building
+If it is a bug [please open an issue on GitHub](https://github.com/quantosobra/ember-semantic-ui-table/issues).
 
-* `ember build`
+## Usage
 
-For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).

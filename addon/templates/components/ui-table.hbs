@@ -1,0 +1,11 @@
+{{#if hasBlock}}
+  {{yield (hash
+    head=(component "ui-thead" table=table)
+    body=(component "ui-tbody" table=table)
+    foot=(component "ui-tfoot" table=table)
+  )}}
+{{else}}
+  {{ui-thead table=table}}
+  {{ui-tbody table=table}}
+  {{ui-tfoot table=table}}
+{{/if}}
