@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('ember-data');
+  this.route('ember-data-interactive');
 });
 
 export default Router;

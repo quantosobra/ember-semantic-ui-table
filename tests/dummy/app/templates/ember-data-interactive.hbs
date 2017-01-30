@@ -1,0 +1,59 @@
+<div class="ui segments" id="interactive-table-ember-data">
+  <div class="ui segment">
+    <h3 class="ui header">Interactive Table with Ember Data</h3>
+  </div>
+  <div class="ui segment">
+    {{! BEGIN-SNIPPET interactive-table-ember-data }}
+    <div class="ui top attached menu">
+      <div class="ui search item">
+        <div class="ui transparent icon input">
+          <input placeholder="Search people..." type="text">
+          <i class="search link icon"></i>
+        </div>
+      </div>
+      <div class="right menu">
+        {{#ui-dropdown class="icon item" action="nothing"}}
+          <i class="setting icon"></i>
+          <div class="menu">
+            <div class="header">Visible columns</div>
+            {{#each table.hideableColumns as |column|}}
+              {{ui-checkbox label=column.label class="item" checked=column.visible onChange=(action (mut column.visible))}}
+            {{/each}}
+          </div>
+        {{/ui-dropdown}}
+      </div>
+    </div>
+    {{#if isLoading}}
+      <div class="table loader">
+        <div class="ui active centered inline text loader">Loading</div>
+      </div>
+    {{else}}
+      {{#ui-table table sortable=true rowSelection=true class="bottom attached" as |t|}}
+        {{t.head}}
+        {{t.body}}
+        {{#t.foot}}
+          <tr>
+            <th colspan="{{table.visibleColumns.length}}">
+              <div class="ui right floated pagination menu">
+                <a class="icon item">
+                  <i class="left chevron icon"></i>
+                </a>
+                <a class="item" onclick={{action "navigateToPage" 1}}>1</a>
+                <a class="item" onclick={{action "navigateToPage" 2}}>2</a>
+                <a class="item" onclick={{action "navigateToPage" 3}}>3</a>
+                <a class="item" onclick={{action "navigateToPage" 4}}>4</a>
+                <a class="icon item">
+                  <i class="right chevron icon"></i>
+                </a>
+              </div>
+            </th>
+          </tr>
+        {{/t.foot}}
+      {{/ui-table}}
+    {{/if}}
+    {{! END-SNIPPET interactive-table-ember-data }}
+  </div>
+  <div class="ui segment">
+    {{code-snippet name="interactive-table-ember-data.hbs"}}
+  </div>
+</div>
