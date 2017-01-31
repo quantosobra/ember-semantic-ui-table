@@ -29,7 +29,7 @@ export default Ember.Component.extend(Columns, EmberDataTable, {
 
     doubleClickCell(r, row, column/* , table */) {
       let content = row.get(column.valuePath);
-      alert(`double click on ${content}`);
+      window.alert(`double click on ${content}`);
     }
   }
 });

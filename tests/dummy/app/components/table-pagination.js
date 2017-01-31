@@ -1,10 +1,7 @@
+// BEGIN-SNIPPET components-table-pagination
 import Ember from 'ember';
 import layout from '../templates/components/table-pagination';
 
-/**
- * @class Pagination
- * @extends Ember.Component
- */
 export default Ember.Component.extend({
   layout,
   classNames: ['ui', 'pagination', 'menu'],
@@ -65,3 +62,4 @@ export default Ember.Component.extend({
     }
   }
 });
+// END-SNIPPET components-table-pagination

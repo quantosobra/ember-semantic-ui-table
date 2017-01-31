@@ -6,10 +6,12 @@
     {{interactive-ember-data}}
   </div>
   <div class="ui top attached tabular menu">
-    <button class="{{if (eq activeTab 1) "active"}} item" {{action (mut activeTab) 1}}>templates/components/interactive-ember-data.hbs</button>
-    <button class="{{if (eq activeTab 2) "active"}} item" {{action (mut activeTab) 2}}>components/interactive-ember-data.js</button>
-    <button class="{{if (eq activeTab 3) "active"}} item" {{action (mut activeTab) 3}}>mixins/columns.js</button>
-    <button class="{{if (eq activeTab 4) "active"}} item" {{action (mut activeTab) 4}}>mixins/ember-data-table.js</button>
+    <button class="{{if (eq activeTab 1) "active"}} item" {{action (mut activeTab) 1}}>interactive-ember-data.hbs</button>
+    <button class="{{if (eq activeTab 2) "active"}} item" {{action (mut activeTab) 2}}>interactive-ember-data.js</button>
+    <button class="{{if (eq activeTab 3) "active"}} item" {{action (mut activeTab) 3}}>columns.js</button>
+    <button class="{{if (eq activeTab 4) "active"}} item" {{action (mut activeTab) 4}}>ember-data-table.js</button>
+    <button class="{{if (eq activeTab 5) "active"}} item" {{action (mut activeTab) 5}}>table-pagination.hbs</button>
+    <button class="{{if (eq activeTab 6) "active"}} item" {{action (mut activeTab) 6}}>table-pagination.js</button>
   </div>
   <div class="ui bottom attached {{if (eq activeTab 1) "active"}} tab segment">
     {{code-snippet name="templates-interactive-ember-data.hbs"}}
@@ -22,5 +24,11 @@
   </div>
   <div class="ui bottom attached {{if (eq activeTab 4) "active"}} tab segment">
     {{code-snippet name="mixins-ember-data-table.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 5) "active"}} tab segment">
+    {{code-snippet name="templates-table-pagination.hbs"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 6) "active"}} tab segment">
+    {{code-snippet name="components-table-pagination.js"}}
   </div>
 </div>

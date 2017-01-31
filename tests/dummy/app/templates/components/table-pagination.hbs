@@ -1,3 +1,4 @@
+{{! BEGIN-SNIPPET templates-table-pagination }}
 <a class="icon item {{if (eq firstPage currentPage) 'disabled'}}" href="#" {{action 'pageSelected' firstPage}}>
   <i class="angle double left icon"></i>
 </a>
@@ -22,3 +23,4 @@
   <i class="angle double right icon"></i>
 </a>
 {{log currentPage totalPages firstPage previousPage nextPage lastPage}}
+{{! END-SNIPPET templates-table-pagination }}
