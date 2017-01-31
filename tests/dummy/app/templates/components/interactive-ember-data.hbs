@@ -40,18 +40,7 @@
           <span>
             {{table.selectedRows.length}} rows selected
           </span>
-          <div class="ui right floated pagination menu">
-            <a class="icon item">
-              <i class="left chevron icon"></i>
-            </a>
-            <a class="item" onclick={{action "navigateToPage" 1}}>1</a>
-            <a class="item" onclick={{action "navigateToPage" 2}}>2</a>
-            <a class="item" onclick={{action "navigateToPage" 3}}>3</a>
-            <a class="item" onclick={{action "navigateToPage" 4}}>4</a>
-            <a class="icon item">
-              <i class="right chevron icon"></i>
-            </a>
-          </div>
+          {{table-pagination class="right floated" totalPages=pageCount currentPage=page onPageChange=(action "navigateToPage")}}
         </th>
       </tr>
     {{/t.foot}}

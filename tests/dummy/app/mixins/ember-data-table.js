@@ -8,6 +8,16 @@ export default Ember.Mixin.create({
   search: '',
   page: 1,
   limit: 10,
+  total: null,
+
+  pageCount: Ember.computed('limit', 'total', function() {
+    let { limit, total } = this.getProperties('limit', 'total');
+    if (total) {
+      return Math.ceil(total / limit);
+    }
+
+    return 0;
+  }),
 
   sort: Ember.computed('table.sortedColumns.firstObject.valuePath', function() {
     let sortedColumn = this.get('table.sortedColumns.firstObject');
@@ -37,6 +47,7 @@ export default Ember.Mixin.create({
     this.set('isLoading', true);
     this.get('store').query('person', query).then((records) => {
       this.set('table.rows', records);
+      this.set('total', records.get('meta.total'));
     }).finally(() => {
       this.set('isLoading', false);
     });

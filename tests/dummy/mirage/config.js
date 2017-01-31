@@ -31,6 +31,7 @@ export default function() {
   this.get('/people', function(schema, request) {
     let { page, limit, sort, dir } = request.queryParams;
     let people = schema.people.all().models;
+    let meta = { total: people.length };
 
     page = Number(page || 1);
     limit = Number(limit || 20);
@@ -46,6 +47,6 @@ export default function() {
     let offset = (page - 1) * limit;
     people = people.slice(offset, offset + limit);
 
-    return { people };
+    return { people, meta };
   });
 }
