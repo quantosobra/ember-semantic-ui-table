@@ -1,11 +1,20 @@
 <div class="ui fixed red inverted huge menu">
   <div class="header item">
-    <img src="{{rootUrl}}/ember-logo.svg" class="ui image">
+    <img src="{{rootURL}}/ember-logo.svg" class="ui image">
     Semantic UI Table
   </div>
   {{link-to "Basic Table" "index" class="item"}}
   {{link-to "Table with Ember Data" "ember-data" class="item"}}
   {{link-to "Interactive Table with Ember Data" "ember-data-interactive" class="item"}}
+
+  <div class="right menu">
+    <a class="item" href="https://quantosobra.github.io/ember-semantic-ui-table/docs/">
+      <i class="book icon"></i> API Documentation
+    </a>
+    <a class="icon item" href="https://github.com/quantosobra/ember-semantic-ui-table/">
+      <i class="github icon"></i>
+    </a>
+  </div>
 </div>
 <div class="ui main container">
   {{outlet}}
