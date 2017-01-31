@@ -23,12 +23,11 @@ export default Ember.Component.extend(Columns, EmberDataTable, {
       this.fetchRecords();
     },
 
-    selectRow(e, row, table) {
-      console.log(arguments);
+    selectRow(e, row/* , table */) {
       row.toggleProperty('selected');
     },
 
-    doubleClickCell(r, row, column, table) {
+    doubleClickCell(r, row, column/* , table */) {
       let content = row.get(column.valuePath);
       alert(`double click on ${content}`);
     }
