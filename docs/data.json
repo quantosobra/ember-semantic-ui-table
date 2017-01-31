@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-table",
         "description": "Semantic UI Table component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-table",
-        "version": "0.0.0.2ee44a42"
+        "version": "0.0.0.da121760"
     },
     "files": {
         "addon/classes/column.js": {
