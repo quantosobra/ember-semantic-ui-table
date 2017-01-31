@@ -1,6 +1,7 @@
+// BEGIN-SNIPPET mixins-columns
 import Ember from 'ember';
 
-export default Ember.Controller.extend({
+export default Ember.Mixin.create({
   columns: Ember.computed(function() {
     return [
       {
@@ -40,3 +41,4 @@ export default Ember.Controller.extend({
     ];
   })
 });
+// END-SNIPPET mixins-columns

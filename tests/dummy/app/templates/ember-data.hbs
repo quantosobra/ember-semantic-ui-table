@@ -3,11 +3,24 @@
     <h3 class="ui header">Table with Ember Data</h3>
   </div>
   <div class="ui segment">
-    {{! BEGIN-SNIPPET table-ember-data }}
-    {{ui-table table}}
-    {{! END-SNIPPET table-ember-data }}
+    {{ember-data model=model}}
   </div>
-  <div class="ui segment">
-    {{code-snippet name="table-ember-data.hbs"}}
+  <div class="ui top attached tabular menu">
+    <button class="{{if (eq activeTab 1) "active"}} item" {{action (mut activeTab) 1}}>templates/ember-data.hbs</button>
+    <button class="{{if (eq activeTab 2) "active"}} item" {{action (mut activeTab) 2}}>components/ember-data.js</button>
+    <button class="{{if (eq activeTab 3) "active"}} item" {{action (mut activeTab) 3}}>routes/ember-data.js</button>
+    <button class="{{if (eq activeTab 4) "active"}} item" {{action (mut activeTab) 4}}>mixins/columns.js</button>
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 1) "active"}} tab segment">
+    {{code-snippet name="templates-ember-data.hbs"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 2) "active"}} tab segment">
+    {{code-snippet name="components-ember-data.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 3) "active"}} tab segment">
+    {{code-snippet name="routes-ember-data.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 4) "active"}} tab segment">
+    {{code-snippet name="mixins-columns.js"}}
   </div>
 </div>
