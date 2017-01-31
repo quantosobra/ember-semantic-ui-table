@@ -10,6 +10,28 @@ export default Ember.Component.extend(Columns, EmberDataTable, {
   init() {
     this._super(...arguments);
     this.fetchRecords();
+  },
+
+  actions: {
+    sortColumn(e, column, table) {
+      table.get('sortedColumns').setEach('sorted', false);
+
+      column.setProperties({
+        sorted: true,
+        direction: column.get('direction') === 'ascending' ? 'descending' : 'ascending'
+      });
+      this.fetchRecords();
+    },
+
+    selectRow(e, row, table) {
+      console.log(arguments);
+      row.toggleProperty('selected');
+    },
+
+    doubleClickCell(r, row, column, table) {
+      let content = row.get(column.valuePath);
+      alert(`double click on ${content}`);
+    }
   }
 });
 // END-SNIPPET components-interactive-ember-data

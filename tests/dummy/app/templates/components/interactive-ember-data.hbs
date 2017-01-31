@@ -23,12 +23,23 @@
     <div class="ui active centered inline text loader">Loading</div>
   </div>
 {{else}}
-  {{#ui-table table sortable=true rowSelection=true class="bottom attached" as |t|}}
+  {{#ui-table table
+    class="bottom attached"
+    sortable=true
+    rowSelection=true
+    onHeaderClick=(action "sortColumn")
+    onRowClick=(action "selectRow")
+    onCellDoubleClick=(action "doubleClickCell")
+    as |t|
+  }}
     {{t.head}}
     {{t.body}}
     {{#t.foot}}
       <tr>
         <th colspan="{{table.visibleColumns.length}}">
+          <span>
+            {{table.selectedRows.length}} rows selected
+          </span>
           <div class="ui right floated pagination menu">
             <a class="icon item">
               <i class="left chevron icon"></i>

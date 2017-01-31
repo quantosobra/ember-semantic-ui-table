@@ -8,14 +8,27 @@ export default Ember.Mixin.create({
   search: '',
   page: 1,
   limit: 10,
-  sort: false,
-  dir: 'asc',
+
+  sort: Ember.computed('table.sortedColumns.firstObject.valuePath', function() {
+    let sortedColumn = this.get('table.sortedColumns.firstObject');
+    if (sortedColumn && sortedColumn.get('sorted')) {
+      return sortedColumn.get('valuePath');
+    }
+    return false;
+  }),
+
+  dir: Ember.computed('table.sortedColumns.firstObject.direction', function() {
+    let sortedColumn = this.get('table.sortedColumns.firstObject');
+    if (sortedColumn && sortedColumn.get('sorted')) {
+      return sortedColumn.get('direction') === 'ascending' ? 'asc' : 'desc';
+    }
+    return false;
+  }),
 
   isLoading: false,
-  rows: [],
 
-  table: Ember.computed('columns', 'rows', function() {
-    return new Table(this.get('columns'), this.get('rows'));
+  table: Ember.computed(function() {
+    return new Table(this.get('columns'), []);
   }),
 
   fetchRecords() {
@@ -23,7 +36,7 @@ export default Ember.Mixin.create({
 
     this.set('isLoading', true);
     this.get('store').query('person', query).then((records) => {
-      this.set('rows', records);
+      this.set('table.rows', records);
     }).finally(() => {
       this.set('isLoading', false);
     });

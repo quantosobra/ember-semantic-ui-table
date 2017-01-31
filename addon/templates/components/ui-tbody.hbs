@@ -1,3 +1,10 @@
 {{#each table.rows as |row|}}
-  {{ui-tr row=row table=table}}
+  {{ui-tr
+    row=row
+    table=table
+    onClick=onRowClick
+    onDoubleClick=onRowDoubleClick
+    onCellClick=onCellClick
+    onCellDoubleClick=onCellDoubleClick
+  }}
 {{/each}}

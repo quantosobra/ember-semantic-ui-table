@@ -1,5 +1,10 @@
 <tr>
   {{#each columns as |column|}}
-    {{ui-th column=column}}
+    {{ui-th
+      column=column
+      table=table
+      onClick=onHeaderClick
+      onDoubleClick=onHeaderDoubleClick
+    }}
   {{/each}}
 </tr>

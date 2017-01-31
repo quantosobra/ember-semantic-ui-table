@@ -24,6 +24,54 @@ const UiTable = Component.extend({
     'rowSelection:selectable'
   ],
 
+  // Events
+
+  /**
+   * @event onCellClick
+   * @param {Event} event Browser event object.
+   * @param {SemanticUI.Row} row The row that was clicked.
+   * @param {SemanticUI.Column} column The column that was clicked.
+   * @param {SemanticUI.Table} table The table object.
+   */
+
+  /**
+   * @event onCellDoubleClick
+   * @param {Event} event Browser event object.
+   * @param {SemanticUI.Row} row The row that was clicked.
+   * @param {SemanticUI.Column} column The column that was clicked.
+   * @param {SemanticUI.Table} table The table object.
+   */
+
+  /**
+   * @event onRowClick
+   * @param {Event} event Browser event object.
+   * @param {SemanticUI.Row} row The row that was clicked.
+   * @param {SemanticUI.Table} table The table object.
+   */
+
+  /**
+   * @event onRowDoubleClick
+   * @param {Event} event Browser event object.
+   * @param {SemanticUI.Row} row The row that was clicked.
+   * @param {SemanticUI.Table} table The table object.
+   */
+
+  /**
+   * @event onHeaderClick
+   * @param {Event} event Browser event object.
+   * @param {SemanticUI.Column} column The column that was clicked.
+   * @param {SemanticUI.Table} table The table object.
+   */
+
+  /**
+   * @event onHeaderDoubleClick
+   * @param {Event} event Browser event object.
+   * @param {SemanticUI.Column} column The column that was clicked.
+   * @param {SemanticUI.Table} table The table object.
+   */
+
+  // Layout settings
+
   /**
    * Whether the single line table variant should be used.
    *

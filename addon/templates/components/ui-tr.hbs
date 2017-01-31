@@ -1,3 +1,9 @@
 {{#each table.visibleColumns as |column|}}
-  {{ui-td column=column row=row table=table}}
+  {{ui-td
+    column=column
+    row=row
+    table=table
+    onClick=onCellClick
+    onDoubleClick=onCellDoubleClick
+  }}
 {{/each}}
