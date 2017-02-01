@@ -1,25 +1,16 @@
 import { moduleForComponent, test } from 'ember-qunit';
+import Table from 'ember-semantic-ui-table/classes/table';
 import hbs from 'htmlbars-inline-precompile';
 
 moduleForComponent('ui-table', 'Integration | Component | ui table', {
   integration: true
 });
 
-test('it renders', function(assert) {
+test('tag name is table', function(assert) {
+  assert.expect(1);
 
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+  this.set('table', new Table());
+  this.render(hbs`{{ui-table table}}`);
 
-  this.render(hbs`{{ui-table}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#ui-table}}
-      template block text
-    {{/ui-table}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.ok(this.$('table').length);
 });

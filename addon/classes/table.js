@@ -86,7 +86,13 @@ export default class Table extends Ember.Object.extend({
    * @return {Array}
    */
   static createRows(rows = [], options = {}) {
-    return rows.map((r) => Row.create(r, options));
+    return rows.map((r) => {
+      if (r instanceof Row) {
+        return r;
+      } else {
+        return Row.create(r, options);
+      }
+    });
   }
 
   /**
@@ -97,6 +103,12 @@ export default class Table extends Ember.Object.extend({
    * @return {Array}
    */
   static createColumns(columns = []) {
-    return columns.map((c) => Column.create(c));
+    return columns.map((c) => {
+      if (c instanceof Column) {
+        return c;
+      } else {
+        return Column.create(c);
+      }
+    });
   }
 }

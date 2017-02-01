@@ -5,21 +5,18 @@ moduleForComponent('ui-tfoot', 'Integration | Component | ui tfoot', {
   integration: true
 });
 
-test('it renders', function(assert) {
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('tag name is tfoot', function(assert) {
+  assert.expect(1);
 
   this.render(hbs`{{ui-tfoot}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.ok(this.$('tfoot').length);
+});
 
-  // Template block usage:
-  this.render(hbs`
-    {{#ui-tfoot}}
-      template block text
-    {{/ui-tfoot}}
-  `);
+test('footer content is rendered', function(assert) {
+  assert.expect(1);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  this.render(hbs`{{#ui-tfoot}}footer content{{/ui-tfoot}}`);
+
+  assert.equal(this.$().text().trim(), 'footer content');
 });

@@ -5,21 +5,10 @@ moduleForComponent('ui-th', 'Integration | Component | ui th', {
   integration: true
 });
 
-test('it renders', function(assert) {
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('tag name is th', function(assert) {
+  assert.expect(1);
 
   this.render(hbs`{{ui-th}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#ui-th}}
-      template block text
-    {{/ui-th}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.ok(this.$('th').length);
 });

@@ -189,7 +189,7 @@ const UiTable = Component.extend({
 
   init() {
     this._super(...arguments);
-    assert('You must pass a table object {{ui-table}}', this.get('table'));
+    assert('You must pass a table object to {{ui-table}}', this.get('table'));
   }
 });
 

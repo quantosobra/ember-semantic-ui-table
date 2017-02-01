@@ -5,21 +5,10 @@ moduleForComponent('ui-thead', 'Integration | Component | ui thead', {
   integration: true
 });
 
-test('it renders', function(assert) {
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('tag name is thead', function(assert) {
+  assert.expect(1);
 
   this.render(hbs`{{ui-thead}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#ui-thead}}
-      template block text
-    {{/ui-thead}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.ok(this.$('thead').length);
 });

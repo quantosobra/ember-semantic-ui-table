@@ -5,21 +5,10 @@ moduleForComponent('ui-td', 'Integration | Component | ui td', {
   integration: true
 });
 
-test('it renders', function(assert) {
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
+test('tag name is td', function(assert) {
+  assert.expect(1);
 
   this.render(hbs`{{ui-td}}`);
 
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#ui-td}}
-      template block text
-    {{/ui-td}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.ok(this.$('td').length);
 });
