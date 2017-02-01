@@ -1,6 +1,6 @@
 import Ember from 'ember';
 
-const { assign } = Ember;
+const assign = Ember.assign || Ember.merge;
 
 /**
  * @class Row
