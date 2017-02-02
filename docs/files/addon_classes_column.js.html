@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.1.0
+        API Docs for: v0.2.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -94,6 +94,30 @@
                  * @required
                  */
                 label: &#x27;&#x27;,
+              
+                /**
+                 * Type of the header for this column. The type is mapped to a component
+                 * name prefixed with &#x60;table-header/&#x60;. To create custom header types, you
+                 * can create a new component named &#x60;table-header/my-custom-header&#x60; and
+                 * specify it here as &#x60;headerType: &#x27;my-custom-header&#x27;&#x60;.
+                 *
+                 * @property headerType
+                 * @type String
+                 * @default &#x27;default&#x27;
+                 */
+                headerType: &#x27;default&#x27;,
+              
+                /**
+                 * Type of the cells for this column. The type is mapped to a component name
+                 * prefixed with &#x60;table-cell/&#x60;. To create custom cell types, you can create
+                 * a new component named &#x60;table-cell/my-custom-cell&#x60; specify it here as
+                 * &#x60;cellType: &#x27;my-custom-cell&#x27;&#x60;.
+                 *
+                 * @property cellType
+                 * @type String
+                 * @default &#x27;default&#x27;
+                 */
+                cellType: &#x27;default&#x27;,
               
                 /**
                  * Whether the column can be hidden.

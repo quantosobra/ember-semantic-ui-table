@@ -2,7 +2,7 @@
 <html lang="en" class="yui-overrride">
 <head>
   <meta charset="utf-8">
-  <title>addon/components/ui-tr.js - ember-semantic-ui-table</title>
+  <title>addon/components/table-cell/default.js - ember-semantic-ui-table</title>
   <link rel="stylesheet" type="text/css" href="../assets/vendor/yui.bundle.min.css"/>
   <link rel="stylesheet" type="text/css" href="../assets/vendor/prettify/prettify-min.css"/>
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700"/>
@@ -72,29 +72,28 @@
         <div class="apidocs">
           <div id="docs-main">
             <div class="content">
-              <h1 class="file-heading">File: addon/components/ui-tr.js</h1>
+              <h1 class="file-heading">File: addon/components/table-cell/default.js</h1>
               
               <div class="file">
                 <pre class="code prettyprint linenums">
                   import Ember from &#x27;ember&#x27;;
-              import layout from &#x27;../templates/components/ui-tr&#x27;;
+              import CellAlignment from &#x27;ember-semantic-ui-table/mixins/cell-alignment&#x27;;
+              import layout from &#x27;ember-semantic-ui-table/templates/components/table-cell/default&#x27;;
               
               const { Component } = Ember;
               
-              export default Component.extend({
+              export default Component.extend(CellAlignment, {
                 layout,
-                tagName: &#x27;tr&#x27;,
-              
-                classNameBindings: [&#x27;row.selected:active&#x27;],
+                tagName: &#x27;td&#x27;,
               
                 click(e) {
-                  let { row, table } = this.getProperties(&#x27;row&#x27;, &#x27;table&#x27;);
-                  this.sendAction(&#x27;onClick&#x27;, e, row, table);
+                  let { row, column, table } = this.getProperties(&#x27;row&#x27;, &#x27;column&#x27;, &#x27;table&#x27;);
+                  this.sendAction(&#x27;onClick&#x27;, e, row, column, table);
                 },
               
                 doubleClick(e) {
-                  let { row, table } = this.getProperties(&#x27;row&#x27;, &#x27;table&#x27;);
-                  this.sendAction(&#x27;onDoubleClick&#x27;, e, row, table);
+                  let { row, column, table } = this.getProperties(&#x27;row&#x27;, &#x27;column&#x27;, &#x27;table&#x27;);
+                  this.sendAction(&#x27;onDoubleClick&#x27;, e, row, column, table);
                 }
               
                 // Events
@@ -103,26 +102,12 @@
                  * @event onClick
                  * @param {Event} event Browser event object.
                  * @param {SemanticUI.Row} row The row that was clicked.
-                 * @param {SemanticUI.Table} table The table object.
-                 */
-              
-                /**
-                 * @event onDoubleClick
-                 * @param {Event} event Browser event object.
-                 * @param {SemanticUI.Row} row The row that was clicked.
-                 * @param {SemanticUI.Table} table The table object.
-                 */
-              
-                /**
-                 * @event onCellClick
-                 * @param {Event} event Browser event object.
-                 * @param {SemanticUI.Row} row The row that was clicked.
                  * @param {SemanticUI.Column} column The column that was clicked.
                  * @param {SemanticUI.Table} table The table object.
                  */
               
                 /**
-                 * @event onCellDoubleClick
+                 * @event onDoubleClick
                  * @param {Event} event Browser event object.
                  * @param {SemanticUI.Row} row The row that was clicked.
                  * @param {SemanticUI.Column} column The column that was clicked.

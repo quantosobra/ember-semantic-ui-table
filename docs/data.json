@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-table",
         "description": "Semantic UI Table component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-table",
-        "version": "v0.1.0"
+        "version": "v0.2.0"
     },
     "files": {
         "addon/classes/column.js": {
@@ -39,26 +39,26 @@
                 "SemanticUI": 1
             }
         },
+        "addon/components/table-cell/default.js": {
+            "name": "addon/components/table-cell/default.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
+        "addon/components/table-header/default.js": {
+            "name": "addon/components/table-header/default.js",
+            "modules": {},
+            "classes": {},
+            "fors": {},
+            "namespaces": {}
+        },
         "addon/components/ui-table.js": {
             "name": "addon/components/ui-table.js",
             "modules": {},
             "classes": {
                 "SemanticUI.UiTable": 1
             },
-            "fors": {},
-            "namespaces": {}
-        },
-        "addon/components/ui-td.js": {
-            "name": "addon/components/ui-td.js",
-            "modules": {},
-            "classes": {},
-            "fors": {},
-            "namespaces": {}
-        },
-        "addon/components/ui-th.js": {
-            "name": "addon/components/ui-th.js",
-            "modules": {},
-            "classes": {},
             "fors": {},
             "namespaces": {}
         },
@@ -159,6 +159,28 @@
         {
             "file": "addon/classes/column.js",
             "line": 20,
+            "description": "Type of the header for this column. The type is mapped to a component\nname prefixed with `table-header/`. To create custom header types, you\ncan create a new component named `table-header/my-custom-header` and\nspecify it here as `headerType: 'my-custom-header'`.",
+            "itemtype": "property",
+            "name": "headerType",
+            "type": "String",
+            "default": "'default'",
+            "class": "SemanticUI.Column",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/column.js",
+            "line": 32,
+            "description": "Type of the cells for this column. The type is mapped to a component name\nprefixed with `table-cell/`. To create custom cell types, you can create\na new component named `table-cell/my-custom-cell` specify it here as\n`cellType: 'my-custom-cell'`.",
+            "itemtype": "property",
+            "name": "cellType",
+            "type": "String",
+            "default": "'default'",
+            "class": "SemanticUI.Column",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/column.js",
+            "line": 44,
             "description": "Whether the column can be hidden.",
             "itemtype": "property",
             "name": "hideable",
@@ -169,7 +191,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 29,
+            "line": 53,
             "description": "Whether the column is hidden.",
             "itemtype": "property",
             "name": "hidden",
@@ -180,7 +202,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 38,
+            "line": 62,
             "description": "Whether the column is visible.",
             "itemtype": "property",
             "name": "visible",
@@ -191,7 +213,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 54,
+            "line": 78,
             "description": "Whether the column is sorted.",
             "itemtype": "property",
             "name": "sorted",
@@ -202,7 +224,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 63,
+            "line": 87,
             "description": "The sort direction when `sorted` is `true`. Either 'ascending' or 'descending'.",
             "itemtype": "property",
             "name": "direction",
@@ -212,7 +234,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 71,
+            "line": 95,
             "description": "Text alignment for the column header and respective cells. Possible\nvalues are `'left'`, `'center'` and `'right'`.",
             "itemtype": "property",
             "name": "align",
@@ -223,7 +245,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 81,
+            "line": 105,
             "description": "Vertical alignment for the column header and respective cells. Possible\nvalues are `'top'`, `'middle'` and `'bottom'`.",
             "itemtype": "property",
             "name": "verticalAlign",
@@ -378,7 +400,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 92,
+            "line": 98,
             "description": "Create a collection of Column objects with the given collection",
             "itemtype": "method",
             "name": "createColumns",
@@ -395,6 +417,116 @@
                 "type": "Array"
             },
             "class": "SemanticUI.Table",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/components/table-cell/default.js",
+            "line": 23,
+            "itemtype": "event",
+            "name": "onClick",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "Browser event object.",
+                    "type": "Event"
+                },
+                {
+                    "name": "row",
+                    "description": "The row that was clicked.",
+                    "type": "SemanticUI.Row"
+                },
+                {
+                    "name": "column",
+                    "description": "The column that was clicked.",
+                    "type": "SemanticUI.Column"
+                },
+                {
+                    "name": "table",
+                    "description": "The table object.",
+                    "type": "SemanticUI.Table"
+                }
+            ],
+            "class": "SemanticUI.UiTable",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/components/table-cell/default.js",
+            "line": 31,
+            "itemtype": "event",
+            "name": "onDoubleClick",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "Browser event object.",
+                    "type": "Event"
+                },
+                {
+                    "name": "row",
+                    "description": "The row that was clicked.",
+                    "type": "SemanticUI.Row"
+                },
+                {
+                    "name": "column",
+                    "description": "The column that was clicked.",
+                    "type": "SemanticUI.Column"
+                },
+                {
+                    "name": "table",
+                    "description": "The table object.",
+                    "type": "SemanticUI.Table"
+                }
+            ],
+            "class": "SemanticUI.UiTable",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/components/table-header/default.js",
+            "line": 24,
+            "itemtype": "event",
+            "name": "onClick",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "Browser event object.",
+                    "type": "Event"
+                },
+                {
+                    "name": "column",
+                    "description": "The column that was clicked.",
+                    "type": "SemanticUI.Column"
+                },
+                {
+                    "name": "table",
+                    "description": "The table object.",
+                    "type": "SemanticUI.Table"
+                }
+            ],
+            "class": "SemanticUI.UiTable",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/components/table-header/default.js",
+            "line": 31,
+            "itemtype": "event",
+            "name": "onDoubleClick",
+            "params": [
+                {
+                    "name": "event",
+                    "description": "Browser event object.",
+                    "type": "Event"
+                },
+                {
+                    "name": "column",
+                    "description": "The column that was clicked.",
+                    "type": "SemanticUI.Column"
+                },
+                {
+                    "name": "table",
+                    "description": "The table object.",
+                    "type": "SemanticUI.Table"
+                }
+            ],
+            "class": "SemanticUI.UiTable",
             "namespace": "SemanticUI"
         },
         {
@@ -695,116 +827,6 @@
             "name": "table",
             "type": "SemanticUI.Table",
             "class": "SemanticUI.UiTable",
-            "namespace": "SemanticUI"
-        },
-        {
-            "file": "addon/components/ui-td.js",
-            "line": 23,
-            "itemtype": "event",
-            "name": "onClick",
-            "params": [
-                {
-                    "name": "event",
-                    "description": "Browser event object.",
-                    "type": "Event"
-                },
-                {
-                    "name": "row",
-                    "description": "The row that was clicked.",
-                    "type": "SemanticUI.Row"
-                },
-                {
-                    "name": "column",
-                    "description": "The column that was clicked.",
-                    "type": "SemanticUI.Column"
-                },
-                {
-                    "name": "table",
-                    "description": "The table object.",
-                    "type": "SemanticUI.Table"
-                }
-            ],
-            "class": "",
-            "namespace": "SemanticUI"
-        },
-        {
-            "file": "addon/components/ui-td.js",
-            "line": 31,
-            "itemtype": "event",
-            "name": "onDoubleClick",
-            "params": [
-                {
-                    "name": "event",
-                    "description": "Browser event object.",
-                    "type": "Event"
-                },
-                {
-                    "name": "row",
-                    "description": "The row that was clicked.",
-                    "type": "SemanticUI.Row"
-                },
-                {
-                    "name": "column",
-                    "description": "The column that was clicked.",
-                    "type": "SemanticUI.Column"
-                },
-                {
-                    "name": "table",
-                    "description": "The table object.",
-                    "type": "SemanticUI.Table"
-                }
-            ],
-            "class": "",
-            "namespace": "SemanticUI"
-        },
-        {
-            "file": "addon/components/ui-th.js",
-            "line": 24,
-            "itemtype": "event",
-            "name": "onClick",
-            "params": [
-                {
-                    "name": "event",
-                    "description": "Browser event object.",
-                    "type": "Event"
-                },
-                {
-                    "name": "column",
-                    "description": "The column that was clicked.",
-                    "type": "SemanticUI.Column"
-                },
-                {
-                    "name": "table",
-                    "description": "The table object.",
-                    "type": "SemanticUI.Table"
-                }
-            ],
-            "class": "",
-            "namespace": "SemanticUI"
-        },
-        {
-            "file": "addon/components/ui-th.js",
-            "line": 31,
-            "itemtype": "event",
-            "name": "onDoubleClick",
-            "params": [
-                {
-                    "name": "event",
-                    "description": "Browser event object.",
-                    "type": "Event"
-                },
-                {
-                    "name": "column",
-                    "description": "The column that was clicked.",
-                    "type": "SemanticUI.Column"
-                },
-                {
-                    "name": "table",
-                    "description": "The table object.",
-                    "type": "SemanticUI.Table"
-                }
-            ],
-            "class": "",
             "namespace": "SemanticUI"
         },
         {

@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.1.0
+        API Docs for: v0.2.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -224,12 +224,20 @@
                               <a href="#property_align">align</a>
               
                             </li>
+                            <li class="index-item property">
+                              <a href="#property_cellType">cellType</a>
+              
+                            </li>
                             <li class="index-item property public inherited">
                               <a href="#property_concatenatedProperties">concatenatedProperties</a>
               
                             </li>
                             <li class="index-item property">
                               <a href="#property_direction">direction</a>
+              
+                            </li>
+                            <li class="index-item property">
+                              <a href="#property_headerType">headerType</a>
               
                             </li>
                             <li class="index-item property">
@@ -2217,7 +2225,7 @@
                         
                           <h3 class="qs-method-name">align</h3>
                           <div class="meta method-meta">
-                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l71"><code>addon&#x2F;classes&#x2F;column.js:71</code></a></p>
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l95"><code>addon&#x2F;classes&#x2F;column.js:95</code></a></p>
                         
                         
                           </div>
@@ -2241,6 +2249,40 @@
                           </div>
                         
                             <p><strong>Default:</strong> &#x27;left&#x27;</p>
+                        
+                        
+                        
+                        </div>
+                        <div id="property_cellType" class="property item">
+                        
+                          <h3 class="qs-method-name">cellType</h3>
+                          <div class="meta method-meta">
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l32"><code>addon&#x2F;classes&#x2F;column.js:32</code></a></p>
+                        
+                        
+                          </div>
+                        
+                          <h3>Syntax</h3>
+                          <div class="qs-method-syntax">
+                            <h3 class="name"><code>cellType</code></h3>
+                            <span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+                        
+                        
+                        
+                        
+                        
+                          </div>
+                        
+                          <div class="description">
+                            <h3>Summary</h3>
+                            <p>Type of the cells for this column. The type is mapped to a component name
+                        prefixed with <code>table-cell/</code>. To create custom cell types, you can create
+                        a new component named <code>table-cell/my-custom-cell</code> specify it here as
+                        <code>cellType: 'my-custom-cell'</code>.</p>
+                        
+                          </div>
+                        
+                            <p><strong>Default:</strong> &#x27;default&#x27;</p>
                         
                         
                         
@@ -2343,7 +2385,7 @@
                         
                           <h3 class="qs-method-name">direction</h3>
                           <div class="meta method-meta">
-                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l63"><code>addon&#x2F;classes&#x2F;column.js:63</code></a></p>
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l87"><code>addon&#x2F;classes&#x2F;column.js:87</code></a></p>
                         
                         
                           </div>
@@ -2369,11 +2411,45 @@
                         
                         
                         </div>
+                        <div id="property_headerType" class="property item">
+                        
+                          <h3 class="qs-method-name">headerType</h3>
+                          <div class="meta method-meta">
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l20"><code>addon&#x2F;classes&#x2F;column.js:20</code></a></p>
+                        
+                        
+                          </div>
+                        
+                          <h3>Syntax</h3>
+                          <div class="qs-method-syntax">
+                            <h3 class="name"><code>headerType</code></h3>
+                            <span class="type"><a href="http://emberjs.com/api/classes/String.html" class="crosslink external" target="_blank">String</a></span>
+                        
+                        
+                        
+                        
+                        
+                          </div>
+                        
+                          <div class="description">
+                            <h3>Summary</h3>
+                            <p>Type of the header for this column. The type is mapped to a component
+                        name prefixed with <code>table-header/</code>. To create custom header types, you
+                        can create a new component named <code>table-header/my-custom-header</code> and
+                        specify it here as <code>headerType: 'my-custom-header'</code>.</p>
+                        
+                          </div>
+                        
+                            <p><strong>Default:</strong> &#x27;default&#x27;</p>
+                        
+                        
+                        
+                        </div>
                         <div id="property_hidden" class="property item">
                         
                           <h3 class="qs-method-name">hidden</h3>
                           <div class="meta method-meta">
-                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l29"><code>addon&#x2F;classes&#x2F;column.js:29</code></a></p>
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l53"><code>addon&#x2F;classes&#x2F;column.js:53</code></a></p>
                         
                         
                           </div>
@@ -2404,7 +2480,7 @@
                         
                           <h3 class="qs-method-name">hideable</h3>
                           <div class="meta method-meta">
-                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l20"><code>addon&#x2F;classes&#x2F;column.js:20</code></a></p>
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l44"><code>addon&#x2F;classes&#x2F;column.js:44</code></a></p>
                         
                         
                           </div>
@@ -2635,7 +2711,7 @@
                         
                           <h3 class="qs-method-name">sorted</h3>
                           <div class="meta method-meta">
-                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l54"><code>addon&#x2F;classes&#x2F;column.js:54</code></a></p>
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l78"><code>addon&#x2F;classes&#x2F;column.js:78</code></a></p>
                         
                         
                           </div>
@@ -2666,7 +2742,7 @@
                         
                           <h3 class="qs-method-name">verticalAlign</h3>
                           <div class="meta method-meta">
-                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l81"><code>addon&#x2F;classes&#x2F;column.js:81</code></a></p>
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l105"><code>addon&#x2F;classes&#x2F;column.js:105</code></a></p>
                         
                         
                           </div>
@@ -2698,7 +2774,7 @@
                         
                           <h3 class="qs-method-name">visible</h3>
                           <div class="meta method-meta">
-                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l38"><code>addon&#x2F;classes&#x2F;column.js:38</code></a></p>
+                                  <p>Defined in <a href="../files/addon_classes_column.js.html#l62"><code>addon&#x2F;classes&#x2F;column.js:62</code></a></p>
                         
                         
                           </div>

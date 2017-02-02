@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.1.0
+        API Docs for: v0.2.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -164,7 +164,13 @@
                  * @return {Array}
                  */
                 static createRows(rows = [], options = {}) {
-                  return rows.map((r) =&gt; Row.create(r, options));
+                  return rows.map((r) =&gt; {
+                    if (r instanceof Row) {
+                      return r;
+                    } else {
+                      return Row.create(r, options);
+                    }
+                  });
                 }
               
                 /**
@@ -175,7 +181,13 @@
                  * @return {Array}
                  */
                 static createColumns(columns = []) {
-                  return columns.map((c) =&gt; Column.create(c));
+                  return columns.map((c) =&gt; {
+                    if (c instanceof Column) {
+                      return c;
+                    } else {
+                      return Column.create(c);
+                    }
+                  });
                 }
               }
               
