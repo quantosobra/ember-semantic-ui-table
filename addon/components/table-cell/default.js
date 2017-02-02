@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import CellAlignment from 'ember-semantic-ui-table/mixins/cell-alignment';
-import layout from 'ember-semantic-ui-table/templates/components/ui-td';
+import layout from 'ember-semantic-ui-table/templates/components/table-cell/default';
 
 const { Component } = Ember;
 

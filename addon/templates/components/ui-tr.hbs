@@ -1,5 +1,5 @@
 {{#each table.visibleColumns as |column|}}
-  {{ui-td
+  {{component (concat "table-cell/" column.cellType)
     column=column
     row=row
     table=table

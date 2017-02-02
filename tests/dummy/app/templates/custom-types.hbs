@@ -1,0 +1,34 @@
+<div class="ui segments" id="table-custom-types">
+  <div class="ui segment">
+    <h3 class="ui header">Custom header & cell types</h3>
+  </div>
+  <div class="ui segment">
+    {{custom-types model=model}}
+  </div>
+  <div class="ui top attached tabular menu">
+    <button class="{{if (eq activeTab 1) "active"}} item" {{action (mut activeTab) 1}}>templates/custom-types.hbs</button>
+    <button class="{{if (eq activeTab 2) "active"}} item" {{action (mut activeTab) 2}}>components/custom-types.js</button>
+    <button class="{{if (eq activeTab 3) "active"}} item" {{action (mut activeTab) 3}}>table-cell/email.js</button>
+    <button class="{{if (eq activeTab 4) "active"}} item" {{action (mut activeTab) 4}}>table-cell/email.hbs</button>
+    <button class="{{if (eq activeTab 5) "active"}} item" {{action (mut activeTab) 5}}>table-header/custom.js</button>
+    <button class="{{if (eq activeTab 6) "active"}} item" {{action (mut activeTab) 6}}>table-header/custom.hbs</button>
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 1) "active"}} tab segment">
+    {{code-snippet name="templates-custom-types.hbs"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 2) "active"}} tab segment">
+    {{code-snippet name="components-custom-types.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 3) "active"}} tab segment">
+    {{code-snippet name="components-table-cell-email.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 4) "active"}} tab segment">
+    {{code-snippet name="templates-table-cell-email.hbs"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 5) "active"}} tab segment">
+    {{code-snippet name="components-table-header-custom.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 6) "active"}} tab segment">
+    {{code-snippet name="templates-table-header-custom.hbs"}}
+  </div>
+</div>
