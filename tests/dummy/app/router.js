@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('ember-data');
   this.route('ember-data-interactive');
   this.route('custom-types');
+  this.route('translatable-header');
 });
 
 export default Router;

@@ -1,0 +1,5 @@
+labels:
+  first_name: Nome
+  last_name: Sobrenome
+  email: E-mail
+  company: Empresa

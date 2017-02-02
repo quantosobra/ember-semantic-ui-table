@@ -1,0 +1,23 @@
+<div class="ui segments" id="table-translatable-header">
+  <div class="ui segment">
+    <h3 class="ui header">Translatable column header</h3>
+  </div>
+  <div class="ui segment">
+    <p>
+      Set locale:
+      <button class="ui button" {{action "changeLocale" "en-us"}}>EN-US</button>
+      <button class="ui button" {{action "changeLocale" "pt-br"}}>PT-BR</button>
+    </p>
+    {{translatable-header model=model}}
+  </div>
+  <div class="ui top attached tabular menu">
+    <button class="{{if (eq activeTab 1) "active"}} item" {{action (mut activeTab) 1}}>templates/translatable-header.hbs</button>
+    <button class="{{if (eq activeTab 2) "active"}} item" {{action (mut activeTab) 2}}>components/translatable-header.js</button>
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 1) "active"}} tab segment">
+    {{code-snippet name="templates-translatable-header.hbs"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 2) "active"}} tab segment">
+    {{code-snippet name="components-translatable-header.js"}}
+  </div>
+</div>
