@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-table",
         "description": "Semantic UI Table component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-table",
-        "version": "v0.2.0"
+        "version": "v0.3.0"
     },
     "files": {
         "addon/classes/column.js": {
@@ -214,6 +214,17 @@
         {
             "file": "addon/classes/column.js",
             "line": 78,
+            "description": "Whether the column can be sorted.",
+            "itemtype": "property",
+            "name": "sortable",
+            "type": "Boolean",
+            "default": "false",
+            "class": "SemanticUI.Column",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/column.js",
+            "line": 87,
             "description": "Whether the column is sorted.",
             "itemtype": "property",
             "name": "sorted",
@@ -224,7 +235,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 87,
+            "line": 96,
             "description": "The sort direction when `sorted` is `true`. Either 'ascending' or 'descending'.",
             "itemtype": "property",
             "name": "direction",
@@ -234,7 +245,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 95,
+            "line": 104,
             "description": "Text alignment for the column header and respective cells. Possible\nvalues are `'left'`, `'center'` and `'right'`.",
             "itemtype": "property",
             "name": "align",
@@ -245,7 +256,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 105,
+            "line": 114,
             "description": "Vertical alignment for the column header and respective cells. Possible\nvalues are `'top'`, `'middle'` and `'bottom'`.",
             "itemtype": "property",
             "name": "verticalAlign",
@@ -380,6 +391,36 @@
         {
             "file": "addon/classes/table.js",
             "line": 81,
+            "itemtype": "method",
+            "name": "setColumns",
+            "params": [
+                {
+                    "name": "columns",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "class": "SemanticUI.Table",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/table.js",
+            "line": 89,
+            "itemtype": "method",
+            "name": "setRows",
+            "params": [
+                {
+                    "name": "rows",
+                    "description": "",
+                    "type": "Array"
+                }
+            ],
+            "class": "SemanticUI.Table",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/table.js",
+            "line": 97,
             "description": "Create a collection of Row objects with the given collection",
             "itemtype": "method",
             "name": "createRows",
@@ -400,7 +441,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 98,
+            "line": 114,
             "description": "Create a collection of Column objects with the given collection",
             "itemtype": "method",
             "name": "createColumns",

@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.2.0
+        API Docs for: v0.3.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -154,6 +154,22 @@
                     columns: _columns,
                     rows: _rows
                   });
+                }
+              
+                /**
+                 * @method setColumns
+                 * @param {Array} columns
+                 */
+                setColumns(columns) {
+                  this.set(&#x27;columns&#x27;, Table.createColumns(columns));
+                }
+              
+                /**
+                 * @method setRows
+                 * @param {Array} rows
+                 */
+                setRows(rows) {
+                  this.set(&#x27;rows&#x27;, Table.createRows(rows));
                 }
               
                 /**
