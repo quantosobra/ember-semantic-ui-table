@@ -1,0 +1,60 @@
+/*----------------------
+    Sortable Columns
+----------------------*/
+
+.ui.table thead th.sortable {
+  cursor: pointer;
+  white-space: nowrap;
+  color: rgba(0, 0, 0, 0.87);
+}
+.ui.table thead th.sortable:first-child {
+  border-left: none;
+}
+.ui.table thead th.sortable.sorted,
+.ui.table thead th.sortable.sorted:hover {
+  user-select: none;
+}
+
+.ui.table thead th.sortable:after {
+  display: none;
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: inherit;
+  content: '';
+  height: 1em;
+  width: auto;
+  opacity: 0.8;
+  margin: 0em 0em 0em 0.5em;
+  font-family: 'Icons';
+}
+.ui.table thead th.sortable.ascending:after {
+  content: '\f0d8';
+}
+.ui.table thead th.sortable.descending:after {
+  content: '\f0d7';
+}
+
+/* Hover */
+.ui.table th.sortable.disabled:hover {
+  cursor: auto;
+  color: rgba(0, 0, 0, 0.2);
+}
+.ui.table thead th.sortable:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sorted */
+.ui.table thead th.sortable.sorted {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+}
+.ui.table thead th.sortable.sorted:after {
+  display: inline-block;
+}
+
+/* Sorted Hover */
+.ui.table thead th.sortable.sorted:hover {
+  background: rgba(0, 0, 0, 0.05);
+  color: rgba(0, 0, 0, 0.8);
+}

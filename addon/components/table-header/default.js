@@ -7,7 +7,7 @@ const { Component } = Ember;
 export default Component.extend(CellAlignment, {
   layout,
   tagName: 'th',
-  classNameBindings: ['column.sorted:sorted', 'column.direction'],
+  classNameBindings: ['column.sortable:sortable', 'column.sorted:sorted', 'column.direction'],
 
   click(e) {
     let { column, table } = this.getProperties('column', 'table');

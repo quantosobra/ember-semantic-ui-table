@@ -76,6 +76,15 @@ export default Ember.Object.extend({
   }),
 
   /**
+   * Whether the column can be sorted.
+   *
+   * @property sortable
+   * @type Boolean
+   * @default false
+   */
+  sortable: false,
+
+  /**
    * Whether the column is sorted.
    *
    * @property sorted

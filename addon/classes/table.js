@@ -79,6 +79,22 @@ export default class Table extends Ember.Object.extend({
   }
 
   /**
+   * @method setColumns
+   * @param {Array} columns
+   */
+  setColumns(columns) {
+    this.set('columns', Table.createColumns(columns));
+  }
+
+  /**
+   * @method setRows
+   * @param {Array} rows
+   */
+  setRows(rows) {
+    this.set('rows', Table.createRows(rows));
+  }
+
+  /**
    * Create a collection of Row objects with the given collection
    * @method createRows
    * @static
