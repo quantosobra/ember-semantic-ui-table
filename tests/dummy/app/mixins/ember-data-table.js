@@ -54,6 +54,10 @@ export default Ember.Mixin.create({
   },
 
   actions: {
+    refresh() {
+      this.fetchRecords();
+    },
+
     navigateToPage(pageNumber) {
       this.set('page', pageNumber);
       this.fetchRecords();

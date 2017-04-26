@@ -29,13 +29,17 @@ export default function() {
   */
 
   this.get('/people', function(schema, request) {
-    let { page, limit, sort, dir } = request.queryParams;
+    let { page, limit, sort, dir, search } = request.queryParams;
     let people = schema.people.all().models;
     let meta = { total: people.length };
 
     page = Number(page || 1);
     limit = Number(limit || 20);
     dir = dir || 'asc';
+
+    if (search) {
+      people = emberArray(people).filterBy('firstName', search);
+    }
 
     if (sort) {
       people = emberArray(people).sortBy(sort);

@@ -2,7 +2,7 @@
 <div class="ui top attached menu">
   <div class="ui search item">
     <div class="ui transparent icon input">
-      <input placeholder="Search people..." type="text">
+      {{input placeholder="Search people..." type="text" value=search enter=(action "refresh")}}
       <i class="search link icon"></i>
     </div>
   </div>
