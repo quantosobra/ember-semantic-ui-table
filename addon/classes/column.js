@@ -18,6 +18,14 @@ export default Ember.Object.extend({
   label: '',
 
   /**
+   * Path to the value displayed in this column.
+   *
+   * @property label
+   * @type String
+   */
+  valuePath: null,
+
+  /**
    * Type of the header for this column. The type is mapped to a component
    * name prefixed with `table-header/`. To create custom header types, you
    * can create a new component named `table-header/my-custom-header` and
