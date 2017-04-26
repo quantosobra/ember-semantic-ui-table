@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-table",
         "description": "Semantic UI Table component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-table",
-        "version": "v0.3.0"
+        "version": "v0.4.0"
     },
     "files": {
         "addon/classes/column.js": {
@@ -159,6 +159,16 @@
         {
             "file": "addon/classes/column.js",
             "line": 20,
+            "description": "Path to the value displayed in this column.",
+            "itemtype": "property",
+            "name": "label",
+            "type": "String",
+            "class": "SemanticUI.Column",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/column.js",
+            "line": 28,
             "description": "Type of the header for this column. The type is mapped to a component\nname prefixed with `table-header/`. To create custom header types, you\ncan create a new component named `table-header/my-custom-header` and\nspecify it here as `headerType: 'my-custom-header'`.",
             "itemtype": "property",
             "name": "headerType",
@@ -169,7 +179,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 32,
+            "line": 40,
             "description": "Type of the cells for this column. The type is mapped to a component name\nprefixed with `table-cell/`. To create custom cell types, you can create\na new component named `table-cell/my-custom-cell` specify it here as\n`cellType: 'my-custom-cell'`.",
             "itemtype": "property",
             "name": "cellType",
@@ -180,7 +190,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 44,
+            "line": 52,
             "description": "Whether the column can be hidden.",
             "itemtype": "property",
             "name": "hideable",
@@ -191,7 +201,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 53,
+            "line": 61,
             "description": "Whether the column is hidden.",
             "itemtype": "property",
             "name": "hidden",
@@ -202,7 +212,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 62,
+            "line": 70,
             "description": "Whether the column is visible.",
             "itemtype": "property",
             "name": "visible",
@@ -213,7 +223,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 78,
+            "line": 86,
             "description": "Whether the column can be sorted.",
             "itemtype": "property",
             "name": "sortable",
@@ -224,7 +234,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 87,
+            "line": 95,
             "description": "Whether the column is sorted.",
             "itemtype": "property",
             "name": "sorted",
@@ -235,7 +245,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 96,
+            "line": 104,
             "description": "The sort direction when `sorted` is `true`. Either 'ascending' or 'descending'.",
             "itemtype": "property",
             "name": "direction",
@@ -245,7 +255,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 104,
+            "line": 112,
             "description": "Text alignment for the column header and respective cells. Possible\nvalues are `'left'`, `'center'` and `'right'`.",
             "itemtype": "property",
             "name": "align",
@@ -256,7 +266,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 114,
+            "line": 122,
             "description": "Vertical alignment for the column header and respective cells. Possible\nvalues are `'top'`, `'middle'` and `'bottom'`.",
             "itemtype": "property",
             "name": "verticalAlign",
