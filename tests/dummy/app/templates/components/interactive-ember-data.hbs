@@ -32,7 +32,9 @@
     as |t|
   }}
     {{t.head}}
-    {{t.body}}
+    {{#t.body}}
+      No results found
+    {{/t.body}}
     {{#t.foot}}
       <tr>
         <th colspan="{{table.visibleColumns.length}}">

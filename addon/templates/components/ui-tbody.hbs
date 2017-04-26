@@ -7,4 +7,10 @@
     onCellClick=onCellClick
     onCellDoubleClick=onCellDoubleClick
   }}
+{{else}}
+  <tr>
+    <td colspan={{table.visibleColumns.length}}>
+      {{yield}}
+    </td>
+  </tr>
 {{/each}}
