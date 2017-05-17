@@ -14,6 +14,24 @@ test('tag name is th', function(assert) {
   assert.ok(this.$('th').length);
 });
 
+test('sortable column has class `sortable`', function(assert) {
+  assert.expect(1);
+
+  this.set('column', new Column({ sortable: true }));
+  this.render(hbs`{{table-header/default column=column}}`);
+
+  assert.ok(this.$('th').hasClass('sortable'));
+});
+
+test('sorted column has class `sorted`', function(assert) {
+  assert.expect(1);
+
+  this.set('column', new Column({ sorted: true }));
+  this.render(hbs`{{table-header/default column=column}}`);
+
+  assert.ok(this.$('th').hasClass('sorted'));
+});
+
 test('collapsing column has class `collapsing`', function(assert) {
   assert.expect(1);
 
