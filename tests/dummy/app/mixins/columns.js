@@ -31,12 +31,14 @@ export default Ember.Mixin.create({
       {
         label: 'Country',
         valuePath: 'country',
-        align: 'center'
+        align: 'center',
+        collapsing: true
       },
       {
         label: 'State',
         valuePath: 'state',
-        align: 'center'
+        align: 'center',
+        collapsing: true
       }
     ];
   })

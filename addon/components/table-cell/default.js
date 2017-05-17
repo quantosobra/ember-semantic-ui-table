@@ -7,6 +7,9 @@ const { Component } = Ember;
 export default Component.extend(CellAlignment, {
   layout,
   tagName: 'td',
+  classNameBindings: [
+    'column.collapsing:collapsing'
+  ],
 
   click(e) {
     let { row, column, table } = this.getProperties('row', 'column', 'table');

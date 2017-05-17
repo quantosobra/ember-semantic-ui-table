@@ -127,5 +127,15 @@ export default Ember.Object.extend({
    * @type String
    * @default 'top'
    */
-  verticalAlign: 'top'
+  verticalAlign: 'top',
+
+  /**
+   * Whether the column is collapsing so that it only uses as much space
+   * as required.
+   *
+   * @property collapsing
+   * @type Boolean
+   * @default false
+   */
+  collapsing: false
 });
