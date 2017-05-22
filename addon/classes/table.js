@@ -2,18 +2,19 @@ import Ember from 'ember';
 import Row from 'ember-semantic-ui-table/classes/row';
 import Column from 'ember-semantic-ui-table/classes/column';
 
-const { computed, A: emberArray } = Ember;
+const { computed, A: emberArray, Object: EmberObject } = Ember;
 
 /**
  * @class Table
  * @extends Ember.Object
  * @namespace SemanticUI
  */
-export default class Table extends Ember.Object.extend({
+export default class Table extends EmberObject.extend({
   /**
    * @property columns
    * @type Ember.Array
    * @default []
+   * @public
    */
   columns: null,
 
@@ -21,42 +22,49 @@ export default class Table extends Ember.Object.extend({
    * @property rows
    * @type Ember.Array
    * @default []
+   * @public
    */
   rows: null,
 
   /**
    * @property isEmpty
    * @type Boolean
+   * @public
    */
   isEmpty: computed.empty('rows').readOnly(),
 
   /**
    * @property selectedRows
    * @type Ember.Array
+   * @public
    */
   selectedRows: computed.filterBy('rows', 'selected', true).readOnly(),
 
   /**
    * @property hideableColumns
    * @type Ember.Array
+   * @public
    */
   hideableColumns: computed.filterBy('columns', 'hideable', true).readOnly(),
 
   /**
    * @property hiddenColumns
    * @type Ember.Array
+   * @public
    */
   hiddenColumns: computed.filterBy('columns', 'hidden', true).readOnly(),
 
   /**
    * @property visibleColumns
    * @type Ember.Array
+   * @public
    */
   visibleColumns: computed.filterBy('columns', 'hidden', false).readOnly(),
 
   /**
    * @property sortedColumns
    * @type Ember.Array
+   * @public
    */
   sortedColumns: computed.filterBy('columns', 'sorted', true).readOnly()
 }) {
@@ -65,6 +73,7 @@ export default class Table extends Ember.Object.extend({
    * @constructor
    * @param  {Array} columns
    * @param  {Array} rows
+   * @public
    */
   constructor(columns = [], rows = []) {
     super();
@@ -81,6 +90,7 @@ export default class Table extends Ember.Object.extend({
   /**
    * @method setColumns
    * @param {Array} columns
+   * @public
    */
   setColumns(columns) {
     this.set('columns', Table.createColumns(columns));
@@ -89,6 +99,7 @@ export default class Table extends Ember.Object.extend({
   /**
    * @method setRows
    * @param {Array} rows
+   * @public
    */
   setRows(rows) {
     this.set('rows', Table.createRows(rows));
@@ -97,9 +108,10 @@ export default class Table extends Ember.Object.extend({
   /**
    * Create a collection of Row objects with the given collection
    * @method createRows
-   * @static
    * @param  {Array}  rows
    * @return {Array}
+   * @public
+   * @static
    */
   static createRows(rows = [], options = {}) {
     return rows.map((r) => {
@@ -114,9 +126,10 @@ export default class Table extends Ember.Object.extend({
   /**
    * Create a collection of Column objects with the given collection
    * @method createColumns
-   * @static
    * @param  {Array}  columns
    * @return {Array}
+   * @public
+   * @static
    */
   static createColumns(columns = []) {
     return columns.map((c) => {

@@ -1,13 +1,13 @@
 import Ember from 'ember';
 
-const assign = Ember.assign || Ember.merge;
+const { ObjectProxy, merge } = Ember;
 
 /**
  * @class Row
  * @extends Ember.ObjectProxy
  * @namespace SemanticUI
  */
-const Row = Ember.ObjectProxy.extend({
+const Row = ObjectProxy.extend({
   /**
    * Whether the row is currently selected.
    *
@@ -34,10 +34,11 @@ Row.reopenClass({
    * @param {Object} content Content for this row.
    * @param {Object} options Properties to initialize in this object.
    * @return Row
+   * @public
    * @static
    */
   create(content, options = {}) {
-    let _options = assign({ content }, options);
+    let _options = merge({ content }, options);
     return this._super(_options);
   }
 });
