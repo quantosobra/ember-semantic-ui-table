@@ -1,0 +1,9 @@
+{{! BEGIN-SNIPPET templates-table-cell-editable }}
+{{#if (and row.editing column.editable)}}
+  <div class="ui input">
+    {{input value=(mut (get row column.valuePath))}}
+  </div>
+{{else}}
+  {{get row column.valuePath}}
+{{/if}}
+{{! END-SNIPPET templates-table-cell-editable }}

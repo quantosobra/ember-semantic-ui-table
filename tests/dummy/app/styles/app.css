@@ -28,3 +28,8 @@
 .table.loader {
   margin: 30px 0;
 }
+
+.table tr.expanded.row td {
+  border-top: none;
+  padding: 0.5em 1em 0.5em 5em;
+}

@@ -150,5 +150,16 @@ export default EmberObject.extend({
    * @default false
    * @public
    */
-  collapsing: false
+  collapsing: false,
+
+  /**
+   * Whether the cells in this column can be edited. Must be used together
+   * with a `cellType` that supports editing.
+   *
+   * @property editable
+   * @type Boolean
+   * @default false
+   * @public
+   */
+  editable: false
 });
