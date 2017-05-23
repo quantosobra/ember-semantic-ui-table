@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('custom-types');
   this.route('translatable-header');
   this.route('expanded-row');
+  this.route('editable');
 });
 
 export default Router;

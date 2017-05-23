@@ -1,0 +1,30 @@
+<div class="ui segments" id="table-custom-types">
+  <div class="ui segment">
+    <h3 class="ui header">Editable cell</h3>
+  </div>
+  <div class="ui segment">
+    <p>
+      <i class="info circle icon"></i>
+      Double-click on a row to enable editing. Check dirty records with Ember Inspector.
+    </p>
+    {{editable-example model=model}}
+  </div>
+  <div class="ui top attached tabular menu">
+    <button class="{{if (eq activeTab 1) "active"}} item" {{action (mut activeTab) 1}}>templates/editable-example.hbs</button>
+    <button class="{{if (eq activeTab 2) "active"}} item" {{action (mut activeTab) 2}}>components/editable-example.js</button>
+    <button class="{{if (eq activeTab 3) "active"}} item" {{action (mut activeTab) 3}}>table-cell/editable.js</button>
+    <button class="{{if (eq activeTab 4) "active"}} item" {{action (mut activeTab) 4}}>table-cell/editable.hbs</button>
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 1) "active"}} tab segment">
+    {{code-snippet name="templates-editable-example.hbs"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 2) "active"}} tab segment">
+    {{code-snippet name="components-editable-example.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 3) "active"}} tab segment">
+    {{code-snippet name="components-table-cell-editable.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 4) "active"}} tab segment">
+    {{code-snippet name="templates-table-cell-editable.hbs"}}
+  </div>
+</div>

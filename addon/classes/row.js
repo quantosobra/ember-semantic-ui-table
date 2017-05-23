@@ -29,6 +29,16 @@ const Row = ObjectProxy.extend({
   expanded: false,
 
   /**
+   * Whether thw row is currently being edited.
+   *
+   * @property editing
+   * @type Boolean
+   * @default false
+   * @public
+   */
+  editing: false,
+
+  /**
    * Content for this row. See {{#crossLink "Ember.ObjectProxy"}}{{/crossLink}}.
    *
    * @property content
