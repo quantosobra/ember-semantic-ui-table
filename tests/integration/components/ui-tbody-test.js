@@ -36,3 +36,18 @@ test('it renders block content when table is empty', function(assert) {
 
   assert.equal(this.$('').text().trim(), 'Table is empty');
 });
+
+test('it renders expanded row component when row is expanded', function(assert) {
+  assert.expect(2);
+
+  let columns = [{ label: 'Column', valuePath: 'text' }];
+  let rows = [{ text: 'This is a test' }];
+
+  this.set('table', new Table(columns, rows));
+  this.render(hbs`{{#ui-tbody table=table expandedRowComponent="expanded-profile-row"}}{{/ui-tbody}}`);
+
+  assert.equal(this.$('tr').length, 1);
+
+  this.set('table.rows.firstObject.expanded', true);
+  assert.equal(this.$('tr').length, 2);
+});

@@ -19,6 +19,16 @@ const Row = ObjectProxy.extend({
   selected: false,
 
   /**
+   * Whether the row is currently expanded.
+   *
+   * @property expanded
+   * @type Boolean
+   * @default false
+   * @public
+   */
+  expanded: false,
+
+  /**
    * Content for this row. See {{#crossLink "Ember.ObjectProxy"}}{{/crossLink}}.
    *
    * @property content

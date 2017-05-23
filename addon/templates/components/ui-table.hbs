@@ -1,39 +1,28 @@
-{{#if hasBlock}}
-  {{yield (hash
-    head=(component "ui-thead"
-      table=table
-      onHeaderClick=onHeaderClick
-      onHeaderDoubleClick=onHeaderDoubleClick
-    )
-    body=(component "ui-tbody"
-      table=table
-      onCellClick=onCellClick
-      onCellDoubleClick=onCellDoubleClick
-      onRowClick=onRowClick
-      onRowDoubleClick=onRowDoubleClick
-    )
-    foot=(component "ui-tfoot"
-      table=table
-    )
-  )}}
-{{else}}
-
-  {{ui-thead
+{{#with (hash
+  head=(component "ui-thead"
     table=table
     onHeaderClick=onHeaderClick
     onHeaderDoubleClick=onHeaderDoubleClick
-  }}
-
-  {{ui-tbody
+  )
+  body=(component "ui-tbody"
     table=table
+    expandedRowComponent=expandedRowComponent
     onCellClick=onCellClick
     onCellDoubleClick=onCellDoubleClick
     onRowClick=onRowClick
     onRowDoubleClick=onRowDoubleClick
-  }}
-
-  {{ui-tfoot
+  )
+  foot=(component "ui-tfoot"
     table=table
-  }}
+  )
+) as |ui|}}
 
-{{/if}}
+  {{#if hasBlock}}
+    {{yield ui}}
+  {{else}}
+    {{ui.head}}
+    {{ui.body}}
+    {{ui.foot}}
+  {{/if}}
+
+{{/with}}
