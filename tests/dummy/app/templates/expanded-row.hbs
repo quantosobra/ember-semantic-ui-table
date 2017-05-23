@@ -1,0 +1,30 @@
+<div class="ui segments" id="table-custom-types">
+  <div class="ui segment">
+    <h3 class="ui header">Expanded Row</h3>
+  </div>
+  <div class="ui segment">
+    {{expanded-row-example model=model}}
+  </div>
+  <div class="ui top attached tabular menu">
+    <button class="{{if (eq activeTab 1) "active"}} item" {{action (mut activeTab) 1}}>templates/expanded-row-example.hbs</button>
+    <button class="{{if (eq activeTab 2) "active"}} item" {{action (mut activeTab) 2}}>components/expanded-row-example.js</button>
+    <button class="{{if (eq activeTab 3) "active"}} item" {{action (mut activeTab) 3}}>table-cell/expand-row.hbs</button>
+    <button class="{{if (eq activeTab 4) "active"}} item" {{action (mut activeTab) 4}}>table-cell/expand-row.js</button>
+    <button class="{{if (eq activeTab 5) "active"}} item" {{action (mut activeTab) 5}}>templates/expanded-profiled-row.hbs</button>
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 1) "active"}} tab segment">
+    {{code-snippet name="templates-expanded-row-example.hbs"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 2) "active"}} tab segment">
+    {{code-snippet name="components-expanded-row-example.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 3) "active"}} tab segment">
+    {{code-snippet name="templates-table-cell-expand-row.hbs"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 4) "active"}} tab segment">
+    {{code-snippet name="components-table-cell-expand-row.js"}}
+  </div>
+  <div class="ui bottom attached {{if (eq activeTab 5) "active"}} tab segment">
+    {{code-snippet name="templates-expanded-profile-row.hbs"}}
+  </div>
+</div>

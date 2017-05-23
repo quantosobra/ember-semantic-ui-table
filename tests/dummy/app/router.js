@@ -11,6 +11,7 @@ Router.map(function() {
   this.route('ember-data-interactive');
   this.route('custom-types');
   this.route('translatable-header');
+  this.route('expanded-row');
 });
 
 export default Router;

@@ -180,6 +180,16 @@ const UiTable = Component.extend({
   rowSelection: false,
 
   /**
+   * Component to display an expanded row.
+   *
+   * @property expandedRow
+   * @type String|Ember.Component
+   * @default null
+   * @public
+   */
+  expandedRowComponent: null,
+
+  /**
    * Table object.
    *
    * @property table
