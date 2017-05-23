@@ -1,19 +1,20 @@
 import Ember from 'ember';
 
-const { computed } = Ember;
+const { Object: EmberObject, computed } = Ember;
 
 /**
  * @class Column
  * @extends Ember.Object
  * @namespace SemanticUI
  */
-export default Ember.Object.extend({
+export default EmberObject.extend({
   /**
    * Label for the column header.
    *
    * @property label
    * @type String
    * @required
+   * @public
    */
   label: '',
 
@@ -22,6 +23,7 @@ export default Ember.Object.extend({
    *
    * @property label
    * @type String
+   * @public
    */
   valuePath: null,
 
@@ -34,6 +36,7 @@ export default Ember.Object.extend({
    * @property headerType
    * @type String
    * @default 'default'
+   * @public
    */
   headerType: 'default',
 
@@ -46,6 +49,7 @@ export default Ember.Object.extend({
    * @property cellType
    * @type String
    * @default 'default'
+   * @public
    */
   cellType: 'default',
 
@@ -55,6 +59,7 @@ export default Ember.Object.extend({
    * @property hideable
    * @type Boolean
    * @default true
+   * @public
    */
   hideable: true,
 
@@ -64,6 +69,7 @@ export default Ember.Object.extend({
    * @property hidden
    * @type Boolean
    * @default false
+   * @public
    */
   hidden: false,
 
@@ -73,6 +79,7 @@ export default Ember.Object.extend({
    * @property visible
    * @type Boolean
    * @default true
+   * @public
    */
   visible: computed('hidden', {
     get() {
@@ -89,6 +96,7 @@ export default Ember.Object.extend({
    * @property sortable
    * @type Boolean
    * @default false
+   * @public
    */
   sortable: false,
 
@@ -98,6 +106,7 @@ export default Ember.Object.extend({
    * @property sorted
    * @type Boolean
    * @default false
+   * @public
    */
   sorted: false,
 
@@ -106,6 +115,7 @@ export default Ember.Object.extend({
    *
    * @property direction
    * @type String
+   * @public
    */
   direction: '',
 
@@ -116,6 +126,7 @@ export default Ember.Object.extend({
    * @property align
    * @type String
    * @default 'left'
+   * @public
    */
   align: 'left',
 
@@ -126,6 +137,7 @@ export default Ember.Object.extend({
    * @property verticalAlign
    * @type String
    * @default 'top'
+   * @public
    */
   verticalAlign: 'top',
 
@@ -136,6 +148,7 @@ export default Ember.Object.extend({
    * @property collapsing
    * @type Boolean
    * @default false
+   * @public
    */
   collapsing: false
 });
