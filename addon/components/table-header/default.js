@@ -10,8 +10,9 @@ export default Component.extend(CellAlignment, {
   classNameBindings: [
     'column.sortable:sortable',
     'column.sorted:sorted',
-    'column.collapsing:collapsing',
-    'column.direction'
+    'column.direction',
+    'column.width',
+    'column.collapsing:collapsing'
   ],
 
   click(e) {
