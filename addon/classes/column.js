@@ -142,6 +142,16 @@ export default EmberObject.extend({
   verticalAlign: 'top',
 
   /**
+   * Column width specified as in Semantic UI grid size (e.g. 'ten wide').
+   *
+   * @property width
+   * @type String
+   * @default null
+   * @public
+   */
+  width: null,
+
+  /**
    * Whether the column is collapsing so that it only uses as much space
    * as required.
    *

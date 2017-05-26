@@ -40,3 +40,13 @@ test('collapsing column has class `collapsing`', function(assert) {
 
   assert.ok(this.$('th').hasClass('collapsing'));
 });
+
+test('column configured with width has correct class', function(assert) {
+  assert.expect(2);
+
+  this.set('column', new Column({ width: 'ten wide' }));
+  this.render(hbs`{{table-header/default column=column}}`);
+
+  assert.ok(this.$('th').hasClass('ten'));
+  assert.ok(this.$('th').hasClass('wide'));
+});
