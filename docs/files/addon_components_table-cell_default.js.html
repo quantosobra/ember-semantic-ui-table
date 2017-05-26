@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.4.0
+        API Docs for: v0.6.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -85,6 +85,9 @@
               export default Component.extend(CellAlignment, {
                 layout,
                 tagName: &#x27;td&#x27;,
+                classNameBindings: [
+                  &#x27;column.collapsing:collapsing&#x27;
+                ],
               
                 click(e) {
                   let { row, column, table } = this.getProperties(&#x27;row&#x27;, &#x27;column&#x27;, &#x27;table&#x27;);

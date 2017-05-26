@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.4.0
+        API Docs for: v0.6.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -256,6 +256,16 @@
                  * @public
                  */
                 rowSelection: false,
+              
+                /**
+                 * Component to display an expanded row.
+                 *
+                 * @property expandedRow
+                 * @type String|Ember.Component
+                 * @default null
+                 * @public
+                 */
+                expandedRowComponent: null,
               
                 /**
                  * Table object.

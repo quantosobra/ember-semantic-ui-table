@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.4.0
+        API Docs for: v0.6.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -78,20 +78,21 @@
                 <pre class="code prettyprint linenums">
                   import Ember from &#x27;ember&#x27;;
               
-              const { computed } = Ember;
+              const { Object: EmberObject, computed } = Ember;
               
               /**
                * @class Column
                * @extends Ember.Object
                * @namespace SemanticUI
                */
-              export default Ember.Object.extend({
+              export default EmberObject.extend({
                 /**
                  * Label for the column header.
                  *
                  * @property label
                  * @type String
                  * @required
+                 * @public
                  */
                 label: &#x27;&#x27;,
               
@@ -100,6 +101,7 @@
                  *
                  * @property label
                  * @type String
+                 * @public
                  */
                 valuePath: null,
               
@@ -112,6 +114,7 @@
                  * @property headerType
                  * @type String
                  * @default &#x27;default&#x27;
+                 * @public
                  */
                 headerType: &#x27;default&#x27;,
               
@@ -124,6 +127,7 @@
                  * @property cellType
                  * @type String
                  * @default &#x27;default&#x27;
+                 * @public
                  */
                 cellType: &#x27;default&#x27;,
               
@@ -133,6 +137,7 @@
                  * @property hideable
                  * @type Boolean
                  * @default true
+                 * @public
                  */
                 hideable: true,
               
@@ -142,6 +147,7 @@
                  * @property hidden
                  * @type Boolean
                  * @default false
+                 * @public
                  */
                 hidden: false,
               
@@ -151,6 +157,7 @@
                  * @property visible
                  * @type Boolean
                  * @default true
+                 * @public
                  */
                 visible: computed(&#x27;hidden&#x27;, {
                   get() {
@@ -167,6 +174,7 @@
                  * @property sortable
                  * @type Boolean
                  * @default false
+                 * @public
                  */
                 sortable: false,
               
@@ -176,6 +184,7 @@
                  * @property sorted
                  * @type Boolean
                  * @default false
+                 * @public
                  */
                 sorted: false,
               
@@ -184,6 +193,7 @@
                  *
                  * @property direction
                  * @type String
+                 * @public
                  */
                 direction: &#x27;&#x27;,
               
@@ -194,6 +204,7 @@
                  * @property align
                  * @type String
                  * @default &#x27;left&#x27;
+                 * @public
                  */
                 align: &#x27;left&#x27;,
               
@@ -204,8 +215,41 @@
                  * @property verticalAlign
                  * @type String
                  * @default &#x27;top&#x27;
+                 * @public
                  */
-                verticalAlign: &#x27;top&#x27;
+                verticalAlign: &#x27;top&#x27;,
+              
+                /**
+                 * Column width specified as in Semantic UI grid size (e.g. &#x27;ten wide&#x27;).
+                 *
+                 * @property width
+                 * @type String
+                 * @default null
+                 * @public
+                 */
+                width: null,
+              
+                /**
+                 * Whether the column is collapsing so that it only uses as much space
+                 * as required.
+                 *
+                 * @property collapsing
+                 * @type Boolean
+                 * @default false
+                 * @public
+                 */
+                collapsing: false,
+              
+                /**
+                 * Whether the cells in this column can be edited. Must be used together
+                 * with a &#x60;cellType&#x60; that supports editing.
+                 *
+                 * @property editable
+                 * @type Boolean
+                 * @default false
+                 * @public
+                 */
+                editable: false
               });
               
                 </pre>

@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.4.0
+        API Docs for: v0.6.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -80,18 +80,19 @@
               import Row from &#x27;ember-semantic-ui-table/classes/row&#x27;;
               import Column from &#x27;ember-semantic-ui-table/classes/column&#x27;;
               
-              const { computed, A: emberArray } = Ember;
+              const { computed, A: emberArray, Object: EmberObject } = Ember;
               
               /**
                * @class Table
                * @extends Ember.Object
                * @namespace SemanticUI
                */
-              export default class Table extends Ember.Object.extend({
+              export default class Table extends EmberObject.extend({
                 /**
                  * @property columns
                  * @type Ember.Array
                  * @default []
+                 * @public
                  */
                 columns: null,
               
@@ -99,42 +100,49 @@
                  * @property rows
                  * @type Ember.Array
                  * @default []
+                 * @public
                  */
                 rows: null,
               
                 /**
                  * @property isEmpty
                  * @type Boolean
+                 * @public
                  */
                 isEmpty: computed.empty(&#x27;rows&#x27;).readOnly(),
               
                 /**
                  * @property selectedRows
                  * @type Ember.Array
+                 * @public
                  */
                 selectedRows: computed.filterBy(&#x27;rows&#x27;, &#x27;selected&#x27;, true).readOnly(),
               
                 /**
                  * @property hideableColumns
                  * @type Ember.Array
+                 * @public
                  */
                 hideableColumns: computed.filterBy(&#x27;columns&#x27;, &#x27;hideable&#x27;, true).readOnly(),
               
                 /**
                  * @property hiddenColumns
                  * @type Ember.Array
+                 * @public
                  */
                 hiddenColumns: computed.filterBy(&#x27;columns&#x27;, &#x27;hidden&#x27;, true).readOnly(),
               
                 /**
                  * @property visibleColumns
                  * @type Ember.Array
+                 * @public
                  */
                 visibleColumns: computed.filterBy(&#x27;columns&#x27;, &#x27;hidden&#x27;, false).readOnly(),
               
                 /**
                  * @property sortedColumns
                  * @type Ember.Array
+                 * @public
                  */
                 sortedColumns: computed.filterBy(&#x27;columns&#x27;, &#x27;sorted&#x27;, true).readOnly()
               }) {
@@ -143,6 +151,7 @@
                  * @constructor
                  * @param  {Array} columns
                  * @param  {Array} rows
+                 * @public
                  */
                 constructor(columns = [], rows = []) {
                   super();
@@ -159,6 +168,7 @@
                 /**
                  * @method setColumns
                  * @param {Array} columns
+                 * @public
                  */
                 setColumns(columns) {
                   this.set(&#x27;columns&#x27;, Table.createColumns(columns));
@@ -167,6 +177,7 @@
                 /**
                  * @method setRows
                  * @param {Array} rows
+                 * @public
                  */
                 setRows(rows) {
                   this.set(&#x27;rows&#x27;, Table.createRows(rows));
@@ -175,9 +186,10 @@
                 /**
                  * Create a collection of Row objects with the given collection
                  * @method createRows
-                 * @static
                  * @param  {Array}  rows
                  * @return {Array}
+                 * @public
+                 * @static
                  */
                 static createRows(rows = [], options = {}) {
                   return rows.map((r) =&gt; {
@@ -192,9 +204,10 @@
                 /**
                  * Create a collection of Column objects with the given collection
                  * @method createColumns
-                 * @static
                  * @param  {Array}  columns
                  * @return {Array}
+                 * @public
+                 * @static
                  */
                 static createColumns(columns = []) {
                   return columns.map((c) =&gt; {

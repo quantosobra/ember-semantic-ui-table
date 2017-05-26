@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.4.0
+        API Docs for: v0.6.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -78,14 +78,14 @@
                 <pre class="code prettyprint linenums">
                   import Ember from &#x27;ember&#x27;;
               
-              const assign = Ember.assign || Ember.merge;
+              const { ObjectProxy, merge } = Ember;
               
               /**
                * @class Row
                * @extends Ember.ObjectProxy
                * @namespace SemanticUI
                */
-              const Row = Ember.ObjectProxy.extend({
+              const Row = ObjectProxy.extend({
                 /**
                  * Whether the row is currently selected.
                  *
@@ -95,6 +95,26 @@
                  * @public
                  */
                 selected: false,
+              
+                /**
+                 * Whether the row is currently expanded.
+                 *
+                 * @property expanded
+                 * @type Boolean
+                 * @default false
+                 * @public
+                 */
+                expanded: false,
+              
+                /**
+                 * Whether thw row is currently being edited.
+                 *
+                 * @property editing
+                 * @type Boolean
+                 * @default false
+                 * @public
+                 */
+                editing: false,
               
                 /**
                  * Content for this row. See {{#crossLink &quot;Ember.ObjectProxy&quot;}}{{/crossLink}}.
@@ -112,10 +132,11 @@
                  * @param {Object} content Content for this row.
                  * @param {Object} options Properties to initialize in this object.
                  * @return Row
+                 * @public
                  * @static
                  */
                 create(content, options = {}) {
-                  let _options = assign({ content }, options);
+                  let _options = merge({ content }, options);
                   return this._super(_options);
                 }
               });

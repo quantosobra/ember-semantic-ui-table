@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-table",
         "description": "Semantic UI Table component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-table",
-        "version": "v0.4.0"
+        "version": "v0.6.0"
     },
     "files": {
         "addon/classes/column.js": {
@@ -115,7 +115,7 @@
             "extension_for": [],
             "namespace": "SemanticUI",
             "file": "addon/classes/table.js",
-            "line": 63,
+            "line": 71,
             "is_constructor": 1,
             "params": [
                 {
@@ -128,7 +128,9 @@
                     "description": "",
                     "type": "Array"
                 }
-            ]
+            ],
+            "access": "public",
+            "tagname": ""
         },
         "SemanticUI.UiTable": {
             "name": "SemanticUI.UiTable",
@@ -153,125 +155,188 @@
             "name": "label",
             "type": "String",
             "required": 1,
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 20,
+            "line": 21,
             "description": "Path to the value displayed in this column.",
             "itemtype": "property",
             "name": "label",
             "type": "String",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 28,
+            "line": 30,
             "description": "Type of the header for this column. The type is mapped to a component\nname prefixed with `table-header/`. To create custom header types, you\ncan create a new component named `table-header/my-custom-header` and\nspecify it here as `headerType: 'my-custom-header'`.",
             "itemtype": "property",
             "name": "headerType",
             "type": "String",
             "default": "'default'",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 40,
+            "line": 43,
             "description": "Type of the cells for this column. The type is mapped to a component name\nprefixed with `table-cell/`. To create custom cell types, you can create\na new component named `table-cell/my-custom-cell` specify it here as\n`cellType: 'my-custom-cell'`.",
             "itemtype": "property",
             "name": "cellType",
             "type": "String",
             "default": "'default'",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 52,
+            "line": 56,
             "description": "Whether the column can be hidden.",
             "itemtype": "property",
             "name": "hideable",
             "type": "Boolean",
             "default": "true",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 61,
+            "line": 66,
             "description": "Whether the column is hidden.",
             "itemtype": "property",
             "name": "hidden",
             "type": "Boolean",
             "default": "false",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 70,
+            "line": 76,
             "description": "Whether the column is visible.",
             "itemtype": "property",
             "name": "visible",
             "type": "Boolean",
             "default": "true",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 86,
+            "line": 93,
             "description": "Whether the column can be sorted.",
             "itemtype": "property",
             "name": "sortable",
             "type": "Boolean",
             "default": "false",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 95,
+            "line": 103,
             "description": "Whether the column is sorted.",
             "itemtype": "property",
             "name": "sorted",
             "type": "Boolean",
             "default": "false",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
-            "line": 104,
+            "line": 113,
             "description": "The sort direction when `sorted` is `true`. Either 'ascending' or 'descending'.",
             "itemtype": "property",
             "name": "direction",
             "type": "String",
-            "class": "SemanticUI.Column",
-            "namespace": "SemanticUI"
-        },
-        {
-            "file": "addon/classes/column.js",
-            "line": 112,
-            "description": "Text alignment for the column header and respective cells. Possible\nvalues are `'left'`, `'center'` and `'right'`.",
-            "itemtype": "property",
-            "name": "align",
-            "type": "String",
-            "default": "'left'",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/column.js",
             "line": 122,
+            "description": "Text alignment for the column header and respective cells. Possible\nvalues are `'left'`, `'center'` and `'right'`.",
+            "itemtype": "property",
+            "name": "align",
+            "type": "String",
+            "default": "'left'",
+            "access": "public",
+            "tagname": "",
+            "class": "SemanticUI.Column",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/column.js",
+            "line": 133,
             "description": "Vertical alignment for the column header and respective cells. Possible\nvalues are `'top'`, `'middle'` and `'bottom'`.",
             "itemtype": "property",
             "name": "verticalAlign",
             "type": "String",
             "default": "'top'",
+            "access": "public",
+            "tagname": "",
+            "class": "SemanticUI.Column",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/column.js",
+            "line": 144,
+            "description": "Column width specified as in Semantic UI grid size (e.g. 'ten wide').",
+            "itemtype": "property",
+            "name": "width",
+            "type": "String",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "SemanticUI.Column",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/column.js",
+            "line": 154,
+            "description": "Whether the column is collapsing so that it only uses as much space\nas required.",
+            "itemtype": "property",
+            "name": "collapsing",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "SemanticUI.Column",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/column.js",
+            "line": 165,
+            "description": "Whether the cells in this column can be edited. Must be used together\nwith a `cellType` that supports editing.",
+            "itemtype": "property",
+            "name": "editable",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Column",
             "namespace": "SemanticUI"
         },
@@ -291,6 +356,32 @@
         {
             "file": "addon/classes/row.js",
             "line": 21,
+            "description": "Whether the row is currently expanded.",
+            "itemtype": "property",
+            "name": "expanded",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "SemanticUI.Row",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/row.js",
+            "line": 31,
+            "description": "Whether thw row is currently being edited.",
+            "itemtype": "property",
+            "name": "editing",
+            "type": "Boolean",
+            "default": "false",
+            "access": "public",
+            "tagname": "",
+            "class": "SemanticUI.Row",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/row.js",
+            "line": 41,
             "description": "Content for this row. See {{#crossLink \"Ember.ObjectProxy\"}}{{/crossLink}}.",
             "itemtype": "property",
             "name": "content",
@@ -302,7 +393,7 @@
         },
         {
             "file": "addon/classes/row.js",
-            "line": 32,
+            "line": 52,
             "itemtype": "method",
             "name": "create",
             "params": [
@@ -320,6 +411,8 @@
             "return": {
                 "description": "Row"
             },
+            "access": "public",
+            "tagname": "",
             "static": 1,
             "class": "SemanticUI.Row",
             "namespace": "SemanticUI"
@@ -331,61 +424,64 @@
             "name": "columns",
             "type": "Ember.Array",
             "default": "[]",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 20,
+            "line": 21,
             "itemtype": "property",
             "name": "rows",
             "type": "Ember.Array",
             "default": "[]",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 27,
+            "line": 29,
             "itemtype": "property",
             "name": "isEmpty",
             "type": "Boolean",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 33,
+            "line": 36,
             "itemtype": "property",
             "name": "selectedRows",
             "type": "Ember.Array",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 39,
+            "line": 43,
             "itemtype": "property",
             "name": "hideableColumns",
             "type": "Ember.Array",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 45,
+            "line": 50,
             "itemtype": "property",
             "name": "hiddenColumns",
             "type": "Ember.Array",
-            "class": "SemanticUI.Table",
-            "namespace": "SemanticUI"
-        },
-        {
-            "file": "addon/classes/table.js",
-            "line": 51,
-            "itemtype": "property",
-            "name": "visibleColumns",
-            "type": "Ember.Array",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
@@ -393,14 +489,27 @@
             "file": "addon/classes/table.js",
             "line": 57,
             "itemtype": "property",
-            "name": "sortedColumns",
+            "name": "visibleColumns",
             "type": "Ember.Array",
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 81,
+            "line": 64,
+            "itemtype": "property",
+            "name": "sortedColumns",
+            "type": "Ember.Array",
+            "access": "public",
+            "tagname": "",
+            "class": "SemanticUI.Table",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/table.js",
+            "line": 90,
             "itemtype": "method",
             "name": "setColumns",
             "params": [
@@ -410,12 +519,14 @@
                     "type": "Array"
                 }
             ],
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 89,
+            "line": 99,
             "itemtype": "method",
             "name": "setRows",
             "params": [
@@ -425,16 +536,17 @@
                     "type": "Array"
                 }
             ],
+            "access": "public",
+            "tagname": "",
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 97,
+            "line": 108,
             "description": "Create a collection of Row objects with the given collection",
             "itemtype": "method",
             "name": "createRows",
-            "static": 1,
             "params": [
                 {
                     "name": "rows",
@@ -446,16 +558,18 @@
                 "description": "",
                 "type": "Array"
             },
+            "access": "public",
+            "tagname": "",
+            "static": 1,
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/classes/table.js",
-            "line": 114,
+            "line": 126,
             "description": "Create a collection of Column objects with the given collection",
             "itemtype": "method",
             "name": "createColumns",
-            "static": 1,
             "params": [
                 {
                     "name": "columns",
@@ -467,12 +581,15 @@
                 "description": "",
                 "type": "Array"
             },
+            "access": "public",
+            "tagname": "",
+            "static": 1,
             "class": "SemanticUI.Table",
             "namespace": "SemanticUI"
         },
         {
             "file": "addon/components/table-cell/default.js",
-            "line": 23,
+            "line": 26,
             "itemtype": "event",
             "name": "onClick",
             "params": [
@@ -502,7 +619,7 @@
         },
         {
             "file": "addon/components/table-cell/default.js",
-            "line": 31,
+            "line": 34,
             "itemtype": "event",
             "name": "onDoubleClick",
             "params": [
@@ -532,7 +649,7 @@
         },
         {
             "file": "addon/components/table-header/default.js",
-            "line": 24,
+            "line": 30,
             "itemtype": "event",
             "name": "onClick",
             "params": [
@@ -557,7 +674,7 @@
         },
         {
             "file": "addon/components/table-header/default.js",
-            "line": 31,
+            "line": 37,
             "itemtype": "event",
             "name": "onDoubleClick",
             "params": [
@@ -873,6 +990,19 @@
         {
             "file": "addon/components/ui-table.js",
             "line": 182,
+            "description": "Component to display an expanded row.",
+            "itemtype": "property",
+            "name": "expandedRow",
+            "type": "String|Ember.Component",
+            "default": "null",
+            "access": "public",
+            "tagname": "",
+            "class": "SemanticUI.UiTable",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/components/ui-table.js",
+            "line": 192,
             "description": "Table object.",
             "itemtype": "property",
             "name": "table",
