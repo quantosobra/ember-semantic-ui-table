@@ -1,0 +1,1 @@
+export { default } from 'ember-semantic-ui-table/components/table-cell/row-number';
