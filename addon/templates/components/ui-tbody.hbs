@@ -1,6 +1,7 @@
-{{#each table.rows as |row|}}
+{{#each table.rows as |row index|}}
   {{ui-tr
     row=row
+    index=index
     table=table
     onClick=onRowClick
     onDoubleClick=onRowDoubleClick
@@ -10,7 +11,7 @@
   {{#if row.expanded}}
     <tr class="expanded row">
       <td colspan={{table.visibleColumns.length}}>
-        {{component expandedRowComponent row=row table=table}}
+        {{component expandedRowComponent row=row index=index table=table}}
       </td>
     </tr>
   {{/if}}
