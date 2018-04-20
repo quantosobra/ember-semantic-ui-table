@@ -62,11 +62,11 @@
     "eslint-plugin-node": "^6.0.1",
     "loader.js": "^4.2.3",
     "lodash.merge": "^4.6.1",
-    "semantic-ui-ember": "^2.1.0",
+    "semantic-ui-ember": "^3.0.0",
     "yuidoc-theme-quantosobra": "github:quantosobra/yuidoc-theme-quantosobra"
   },
   "peerDependencies": {
-    "semantic-ui-ember": "^2.0.1"
+    "semantic-ui-ember": "^3.0.0"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
