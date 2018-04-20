@@ -1,15 +1,18 @@
 // BEGIN-SNIPPET components-table-pagination
-import Ember from 'ember';
+import { reads } from '@ember/object/computed';
+
+import { computed } from '@ember/object';
+import Component from '@ember/component';
 import layout from '../templates/components/table-pagination';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout,
   classNames: ['ui', 'pagination', 'menu'],
 
   currentPage: null,
   totalPages: null,
 
-  firstPage: Ember.computed('totalPages', function() {
+  firstPage: computed('totalPages', function() {
     if (this.get('totalPages') === 0) {
       return false;
     }
@@ -17,7 +20,7 @@ export default Ember.Component.extend({
     return 1;
   }),
 
-  previousPage: Ember.computed('currentPage', function() {
+  previousPage: computed('currentPage', function() {
     let current = Number(this.get('currentPage'));
     let first = Number(this.get('firstPage'));
 
@@ -28,7 +31,7 @@ export default Ember.Component.extend({
     return current - 1;
   }),
 
-  nextPage: Ember.computed('currentPage', 'totalPages', function() {
+  nextPage: computed('currentPage', 'totalPages', function() {
     let current = Number(this.get('currentPage'));
     let total = Number(this.get('totalPages'));
 
@@ -39,9 +42,9 @@ export default Ember.Component.extend({
     return current + 1;
   }),
 
-  lastPage: Ember.computed.reads('totalPages'),
+  lastPage: reads('totalPages'),
 
-  pageNumbers: Ember.computed('totalPages', function() {
+  pageNumbers: computed('totalPages', function() {
     let pages = [];
     let count = this.get('totalPages');
 

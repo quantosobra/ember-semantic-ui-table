@@ -1,24 +1,26 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, find, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import Column from 'ember-semantic-ui-table/classes/column';
 
-moduleForComponent('table-cell/default', 'Integration | Component | table cell/default', {
-  integration: true
-});
+module('Integration | Component | table cell/default', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('tag name is td', function(assert) {
-  assert.expect(1);
+  test('tag name is td', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`{{table-cell/default}}`);
+    await render(hbs`{{table-cell/default}}`);
 
-  assert.ok(this.$('td').length);
-});
+    assert.ok(findAll('td').length);
+  });
 
-test('collapsing column has class `collapsing`', function(assert) {
-  assert.expect(1);
+  test('collapsing column has class `collapsing`', async function(assert) {
+    assert.expect(1);
 
-  this.set('column', new Column({ collapsing: true }));
-  this.render(hbs`{{table-cell/default column=column}}`);
+    this.set('column', new Column({ collapsing: true }));
+    await render(hbs`{{table-cell/default column=column}}`);
 
-  assert.ok(this.$('td').hasClass('collapsing'));
+    assert.ok(find('td').classList.contains('collapsing'));
+  });
 });

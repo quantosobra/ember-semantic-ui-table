@@ -1,14 +1,16 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('ui-thead', 'Integration | Component | ui thead', {
-  integration: true
-});
+module('Integration | Component | ui thead', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('tag name is thead', function(assert) {
-  assert.expect(1);
+  test('tag name is thead', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`{{ui-thead}}`);
+    await render(hbs`{{ui-thead}}`);
 
-  assert.ok(this.$('thead').length);
+    assert.ok(findAll('thead').length);
+  });
 });

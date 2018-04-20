@@ -1,52 +1,54 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, find, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 import Column from 'ember-semantic-ui-table/classes/column';
 
-moduleForComponent('table-header/default', 'Integration | Component | table header/default', {
-  integration: true
-});
+module('Integration | Component | table header/default', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('tag name is th', function(assert) {
-  assert.expect(1);
+  test('tag name is th', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`{{table-header/default}}`);
+    await render(hbs`{{table-header/default}}`);
 
-  assert.ok(this.$('th').length);
-});
+    assert.ok(findAll('th').length);
+  });
 
-test('sortable column has class `sortable`', function(assert) {
-  assert.expect(1);
+  test('sortable column has class `sortable`', async function(assert) {
+    assert.expect(1);
 
-  this.set('column', new Column({ sortable: true }));
-  this.render(hbs`{{table-header/default column=column}}`);
+    this.set('column', new Column({ sortable: true }));
+    await render(hbs`{{table-header/default column=column}}`);
 
-  assert.ok(this.$('th').hasClass('sortable'));
-});
+    assert.ok(find('th').classList.contains('sortable'));
+  });
 
-test('sorted column has class `sorted`', function(assert) {
-  assert.expect(1);
+  test('sorted column has class `sorted`', async function(assert) {
+    assert.expect(1);
 
-  this.set('column', new Column({ sorted: true }));
-  this.render(hbs`{{table-header/default column=column}}`);
+    this.set('column', new Column({ sorted: true }));
+    await render(hbs`{{table-header/default column=column}}`);
 
-  assert.ok(this.$('th').hasClass('sorted'));
-});
+    assert.ok(find('th').classList.contains('sorted'));
+  });
 
-test('collapsing column has class `collapsing`', function(assert) {
-  assert.expect(1);
+  test('collapsing column has class `collapsing`', async function(assert) {
+    assert.expect(1);
 
-  this.set('column', new Column({ collapsing: true }));
-  this.render(hbs`{{table-header/default column=column}}`);
+    this.set('column', new Column({ collapsing: true }));
+    await render(hbs`{{table-header/default column=column}}`);
 
-  assert.ok(this.$('th').hasClass('collapsing'));
-});
+    assert.ok(find('th').classList.contains('collapsing'));
+  });
 
-test('column configured with width has correct class', function(assert) {
-  assert.expect(2);
+  test('column configured with width has correct class', async function(assert) {
+    assert.expect(2);
 
-  this.set('column', new Column({ width: 'ten wide' }));
-  this.render(hbs`{{table-header/default column=column}}`);
+    this.set('column', new Column({ width: 'ten wide' }));
+    await render(hbs`{{table-header/default column=column}}`);
 
-  assert.ok(this.$('th').hasClass('ten'));
-  assert.ok(this.$('th').hasClass('wide'));
+    assert.ok(find('th').classList.contains('ten'));
+    assert.ok(find('th').classList.contains('wide'));
+  });
 });

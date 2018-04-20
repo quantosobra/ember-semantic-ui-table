@@ -1,8 +1,10 @@
 // BEGIN-SNIPPET mixins-columns
-import Ember from 'ember';
+import { computed } from '@ember/object';
 
-export default Ember.Mixin.create({
-  columns: Ember.computed(function() {
+import Mixin from '@ember/object/mixin';
+
+export default Mixin.create({
+  columns: computed(function() {
     return [
       {
         cellType: 'row-number',

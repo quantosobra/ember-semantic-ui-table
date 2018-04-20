@@ -1,13 +1,15 @@
 // BEGIN-SNIPPET components-custom-types
-import Ember from 'ember';
+import { computed } from '@ember/object';
+
+import Component from '@ember/component';
 import Columns from '../mixins/columns';
 import layout from '../templates/components/custom-types';
 import { Table } from 'ember-semantic-ui-table';
 
-export default Ember.Component.extend(Columns, {
+export default Component.extend(Columns, {
   layout,
 
-  columns: Ember.computed(function() {
+  columns: computed(function() {
     return [
       {
         label: 'First Name',
@@ -32,7 +34,7 @@ export default Ember.Component.extend(Columns, {
     ];
   }),
 
-  table: Ember.computed('columns', 'rows', function() {
+  table: computed('columns', 'rows', function() {
     return new Table(this.get('columns'), this.get('model'));
   })
 });

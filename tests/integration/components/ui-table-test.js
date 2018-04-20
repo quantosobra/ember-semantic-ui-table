@@ -1,115 +1,117 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, find, findAll } from '@ember/test-helpers';
 import Table from 'ember-semantic-ui-table/classes/table';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('ui-table', 'Integration | Component | ui table', {
-  integration: true
-});
+module('Integration | Component | ui table', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('tag name is table', function(assert) {
-  assert.expect(1);
+  test('tag name is table', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table}}`);
 
-  assert.ok(this.$('table').length);
-});
+    assert.ok(findAll('table').length);
+  });
 
-test('single line table has class `single line`', function(assert) {
-  assert.expect(1);
+  test('single line table has class `single line`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table singleLine=true}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table singleLine=true}}`);
 
-  assert.ok(this.$('table').hasClass('single line'));
-});
+    assert.ok(find('table').className.indexOf('single line') !== -1);
+  });
 
-test('sortable table has class `sortable`', function(assert) {
-  assert.expect(1);
+  test('sortable table has class `sortable`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table sortable=true}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table sortable=true}}`);
 
-  assert.ok(this.$('table').hasClass('sortable'));
-});
+    assert.ok(find('table').classList.contains('sortable'));
+  });
 
-test('not stackable table has class `unstackable`', function(assert) {
-  assert.expect(1);
+  test('not stackable table has class `unstackable`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table stacking=false}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table stacking=false}}`);
 
-  assert.ok(this.$('table').hasClass('unstackable'));
-});
+    assert.ok(find('table').classList.contains('unstackable'));
+  });
 
-test('fixed table has class `fixed`', function(assert) {
-  assert.expect(1);
+  test('fixed table has class `fixed`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table fixed=true}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table fixed=true}}`);
 
-  assert.ok(this.$('table').hasClass('fixed'));
-});
+    assert.ok(find('table').classList.contains('fixed'));
+  });
 
-test('striped table has class `striped`', function(assert) {
-  assert.expect(1);
+  test('striped table has class `striped`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table striped=true}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table striped=true}}`);
 
-  assert.ok(this.$('table').hasClass('striped'));
-});
+    assert.ok(find('table').classList.contains('striped'));
+  });
 
-test('celled table has class `celled`', function(assert) {
-  assert.expect(1);
+  test('celled table has class `celled`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table celled=true}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table celled=true}}`);
 
-  assert.ok(this.$('table').hasClass('celled'));
-});
+    assert.ok(find('table').classList.contains('celled'));
+  });
 
-test('padded table has class `padded`', function(assert) {
-  assert.expect(1);
+  test('padded table has class `padded`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table padded=true}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table padded=true}}`);
 
-  assert.ok(this.$('table').hasClass('padded'));
-});
+    assert.ok(find('table').classList.contains('padded'));
+  });
 
-test('compact table has class `compact`', function(assert) {
-  assert.expect(1);
+  test('compact table has class `compact`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table compact=true}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table compact=true}}`);
 
-  assert.ok(this.$('table').hasClass('compact'));
-});
+    assert.ok(find('table').classList.contains('compact'));
+  });
 
-test('small table has class `small`', function(assert) {
-  assert.expect(1);
+  test('small table has class `small`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table size="small"}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table size="small"}}`);
 
-  assert.ok(this.$('table').hasClass('small'));
-});
+    assert.ok(find('table').classList.contains('small'));
+  });
 
-test('large table has class `large`', function(assert) {
-  assert.expect(1);
+  test('large table has class `large`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table size="large"}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table size="large"}}`);
 
-  assert.ok(this.$('table').hasClass('large'));
-});
+    assert.ok(find('table').classList.contains('large'));
+  });
 
-test('table with row selection enabled has class `selectable`', function(assert) {
-  assert.expect(1);
+  test('table with row selection enabled has class `selectable`', async function(assert) {
+    assert.expect(1);
 
-  this.set('table', new Table());
-  this.render(hbs`{{ui-table table rowSelection=true}}`);
+    this.set('table', new Table());
+    await render(hbs`{{ui-table table rowSelection=true}}`);
 
-  assert.ok(this.$('table').hasClass('selectable'));
+    assert.ok(find('table').classList.contains('selectable'));
+  });
 });

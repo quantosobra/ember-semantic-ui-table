@@ -1,25 +1,27 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, settled, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
-import wait from 'ember-test-helpers/wait';
 import Column from 'ember-semantic-ui-table/classes/column';
 
 let service;
 
-moduleForComponent('table-header/translatable', 'Integration | Component | table header/translatable', {
-  integration: true,
-  setup() {
-    service = this.container.lookup('service:intl');
+module('Integration | Component | table header/translatable', function(hooks) {
+  setupRenderingTest(hooks);
+
+  hooks.beforeEach(function() {
+    service = this.owner.lookup('service:intl');
     service.setLocale('en-us');
-  }
-});
+  });
 
-test('header label is translated', function(assert) {
-  assert.expect(1);
+  test('header label is translated', async function(assert) {
+    assert.expect(1);
 
-  this.set('column', new Column({ label: 'labels.first_name' }));
-  this.render(hbs`{{table-header/translatable column=column}}`);
+    this.set('column', new Column({ label: 'labels.first_name' }));
+    await render(hbs`{{table-header/translatable column=column}}`);
 
-  return wait().then(() => {
-    assert.equal(this.$().text().trim(), 'First Name');
+    return settled().then(() => {
+      assert.equal(find('*').textContent.trim(), 'First Name');
+    });
   });
 });

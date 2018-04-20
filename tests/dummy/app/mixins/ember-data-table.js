@@ -1,16 +1,19 @@
 // BEGIN-SNIPPET mixins-ember-data-table
-import Ember from 'ember';
+import { computed } from '@ember/object';
+
+import { inject as service } from '@ember/service';
+import Mixin from '@ember/object/mixin';
 import { Table } from 'ember-semantic-ui-table';
 
-export default Ember.Mixin.create({
-  store: Ember.inject.service(),
+export default Mixin.create({
+  store: service(),
 
   search: '',
   page: 1,
   limit: 10,
   total: null,
 
-  pageCount: Ember.computed('limit', 'total', function() {
+  pageCount: computed('limit', 'total', function() {
     let { limit, total } = this.getProperties('limit', 'total');
     if (total) {
       return Math.ceil(total / limit);
@@ -19,7 +22,7 @@ export default Ember.Mixin.create({
     return 0;
   }),
 
-  sort: Ember.computed('table.sortedColumns.firstObject.valuePath', function() {
+  sort: computed('table.sortedColumns.firstObject.valuePath', function() {
     let sortedColumn = this.get('table.sortedColumns.firstObject');
     if (sortedColumn && sortedColumn.get('sorted')) {
       return sortedColumn.get('valuePath');
@@ -27,7 +30,7 @@ export default Ember.Mixin.create({
     return false;
   }),
 
-  dir: Ember.computed('table.sortedColumns.firstObject.direction', function() {
+  dir: computed('table.sortedColumns.firstObject.direction', function() {
     let sortedColumn = this.get('table.sortedColumns.firstObject');
     if (sortedColumn && sortedColumn.get('sorted')) {
       return sortedColumn.get('direction') === 'ascending' ? 'asc' : 'desc';
@@ -37,7 +40,7 @@ export default Ember.Mixin.create({
 
   isLoading: false,
 
-  table: Ember.computed(function() {
+  table: computed(function() {
     return new Table(this.get('columns'), []);
   }),
 

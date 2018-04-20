@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Component from '@ember/component';
+import { assert } from '@ember/debug';
+import { computed } from '@ember/object';
 import layout from '../templates/components/ui-table';
-
-const { Component, assert, computed } = Ember;
 
 /**
  * @class UiTable

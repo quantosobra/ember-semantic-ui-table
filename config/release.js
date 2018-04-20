@@ -1,4 +1,4 @@
-/* jshint node:true */
+/* eslint-disable no-console */
 var execSync = require('child_process').execSync;
 
 module.exports = {
@@ -13,4 +13,3 @@ function runCommand(command) {
   var output = execSync(command, { encoding: 'utf8' });
   console.log(output);
 }
-

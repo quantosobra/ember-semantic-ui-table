@@ -1,8 +1,8 @@
-import Ember from 'ember';
+import { empty, filterBy } from '@ember/object/computed';
+import { A as emberArray } from '@ember/array';
+import EmberObject from '@ember/object';
 import Row from 'ember-semantic-ui-table/classes/row';
 import Column from 'ember-semantic-ui-table/classes/column';
-
-const { computed, A: emberArray, Object: EmberObject } = Ember;
 
 /**
  * @class Table
@@ -31,42 +31,42 @@ export default class Table extends EmberObject.extend({
    * @type Boolean
    * @public
    */
-  isEmpty: computed.empty('rows').readOnly(),
+  isEmpty: empty('rows').readOnly(),
 
   /**
    * @property selectedRows
    * @type Ember.Array
    * @public
    */
-  selectedRows: computed.filterBy('rows', 'selected', true).readOnly(),
+  selectedRows: filterBy('rows', 'selected', true).readOnly(),
 
   /**
    * @property hideableColumns
    * @type Ember.Array
    * @public
    */
-  hideableColumns: computed.filterBy('columns', 'hideable', true).readOnly(),
+  hideableColumns: filterBy('columns', 'hideable', true).readOnly(),
 
   /**
    * @property hiddenColumns
    * @type Ember.Array
    * @public
    */
-  hiddenColumns: computed.filterBy('columns', 'hidden', true).readOnly(),
+  hiddenColumns: filterBy('columns', 'hidden', true).readOnly(),
 
   /**
    * @property visibleColumns
    * @type Ember.Array
    * @public
    */
-  visibleColumns: computed.filterBy('columns', 'hidden', false).readOnly(),
+  visibleColumns: filterBy('columns', 'hidden', false).readOnly(),
 
   /**
    * @property sortedColumns
    * @type Ember.Array
    * @public
    */
-  sortedColumns: computed.filterBy('columns', 'sorted', true).readOnly()
+  sortedColumns: filterBy('columns', 'sorted', true).readOnly()
 }) {
   /**
    * @class Table
