@@ -1,22 +1,24 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, findAll, find } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('ui-tfoot', 'Integration | Component | ui tfoot', {
-  integration: true
-});
+module('Integration | Component | ui tfoot', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('tag name is tfoot', function(assert) {
-  assert.expect(1);
+  test('tag name is tfoot', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`{{ui-tfoot}}`);
+    await render(hbs`{{ui-tfoot}}`);
 
-  assert.ok(this.$('tfoot').length);
-});
+    assert.ok(findAll('tfoot').length);
+  });
 
-test('footer content is rendered', function(assert) {
-  assert.expect(1);
+  test('footer content is rendered', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`{{#ui-tfoot}}footer content{{/ui-tfoot}}`);
+    await render(hbs`{{#ui-tfoot}}footer content{{/ui-tfoot}}`);
 
-  assert.equal(this.$().text().trim(), 'footer content');
+    assert.equal(find('*').textContent.trim(), 'footer content');
+  });
 });

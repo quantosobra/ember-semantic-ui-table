@@ -1,6 +1,5 @@
-import Ember from 'ember';
-
-const { ObjectProxy, merge } = Ember;
+import ObjectProxy from '@ember/object/proxy';
+import { merge } from '@ember/polyfills';
 
 /**
  * @class Row

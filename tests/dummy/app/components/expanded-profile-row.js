@@ -1,8 +1,8 @@
 // BEGIN-SNIPPET components-expanded-profile-row
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from '../templates/components/expanded-profile-row';
 
-export default Ember.Component.extend({
+export default Component.extend({
   layout
 });
 // END-SNIPPET components-expanded-profile-row

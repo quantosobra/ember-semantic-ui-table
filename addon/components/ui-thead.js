@@ -1,13 +1,12 @@
-import Ember from 'ember';
+import { alias } from '@ember/object/computed';
+import Component from '@ember/component';
 import layout from '../templates/components/ui-thead';
-
-const { Component, computed } = Ember;
 
 export default Component.extend({
   layout,
   tagName: 'thead',
 
-  columns: computed.alias('table.visibleColumns').readOnly()
+  columns: alias('table.visibleColumns').readOnly()
 
   /**
    * @event onHeaderClick

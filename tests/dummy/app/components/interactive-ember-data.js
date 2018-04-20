@@ -1,11 +1,13 @@
 // BEGIN-SNIPPET components-interactive-ember-data
-import Ember from 'ember';
+import { computed } from '@ember/object';
+
+import Component from '@ember/component';
 import Columns from '../mixins/columns';
 import EmberDataTable from '../mixins/ember-data-table';
 import layout from '../templates/components/interactive-ember-data';
 import { Table } from 'ember-semantic-ui-table';
 
-export default Ember.Component.extend(Columns, EmberDataTable, {
+export default Component.extend(Columns, EmberDataTable, {
   layout,
 
   init() {
@@ -13,7 +15,7 @@ export default Ember.Component.extend(Columns, EmberDataTable, {
     this.fetchRecords();
   },
 
-  table: Ember.computed(function() {
+  table: computed(function() {
     let columns = this.get('columns');
     columns[0].sortable = true;
     columns[1].sortable = true;

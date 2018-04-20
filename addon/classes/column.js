@@ -1,6 +1,4 @@
-import Ember from 'ember';
-
-const { Object: EmberObject, computed } = Ember;
+import EmberObject, { computed } from '@ember/object';
 
 /**
  * @class Column

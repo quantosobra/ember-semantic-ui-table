@@ -1,14 +1,16 @@
-import { moduleForComponent, test } from 'ember-qunit';
+import { module, test } from 'qunit';
+import { setupRenderingTest } from 'ember-qunit';
+import { render, findAll } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
-moduleForComponent('ui-tr', 'Integration | Component | ui tr', {
-  integration: true
-});
+module('Integration | Component | ui tr', function(hooks) {
+  setupRenderingTest(hooks);
 
-test('tag name is tr', function(assert) {
-  assert.expect(1);
+  test('tag name is tr', async function(assert) {
+    assert.expect(1);
 
-  this.render(hbs`{{ui-tr}}`);
+    await render(hbs`{{ui-tr}}`);
 
-  assert.ok(this.$('tr').length);
+    assert.ok(findAll('tr').length);
+  });
 });

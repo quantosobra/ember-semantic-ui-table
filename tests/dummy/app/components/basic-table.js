@@ -1,13 +1,15 @@
 // BEGIN-SNIPPET components-basic-table
-import Ember from 'ember';
+import { computed } from '@ember/object';
+
+import Component from '@ember/component';
 import Columns from '../mixins/columns';
 import layout from '../templates/components/basic-table';
 import { Table } from 'ember-semantic-ui-table';
 
-export default Ember.Component.extend(Columns, {
+export default Component.extend(Columns, {
   layout,
 
-  rows: Ember.computed(function() {
+  rows: computed(function() {
     return [
       {
         firstName: 'John',
@@ -20,7 +22,7 @@ export default Ember.Component.extend(Columns, {
     ];
   }),
 
-  table: Ember.computed('columns', 'rows', function() {
+  table: computed('columns', 'rows', function() {
     return new Table(this.get('columns'), this.get('rows'));
   })
 });
