@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0 (2018-04-20)
+
+* [[#6](https://github.com/quantosobra/ember-semantic-ui-table/pull/6)] Update Semantic UI
+
 ## 0.5.0 (2017-05-23)
 
 * [[#3](https://github.com/quantosobra/ember-semantic-ui-table/pull/3)] Expanded row support
@@ -7,7 +11,7 @@
 
 ## 0.4.0 (2017-04-26)
 
-* Show ui-tbody block content when table is empty 
+* Show ui-tbody block content when table is empty
 
 ## 0.3.0 (2017-04-25)
 
