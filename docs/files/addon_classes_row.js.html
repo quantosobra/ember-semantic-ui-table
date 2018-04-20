@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.6.0
+        API Docs for: v1.0.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -76,9 +76,8 @@
               
               <div class="file">
                 <pre class="code prettyprint linenums">
-                  import Ember from &#x27;ember&#x27;;
-              
-              const { ObjectProxy, merge } = Ember;
+                  import ObjectProxy from &#x27;@ember/object/proxy&#x27;;
+              import { merge } from &#x27;@ember/polyfills&#x27;;
               
               /**
                * @class Row

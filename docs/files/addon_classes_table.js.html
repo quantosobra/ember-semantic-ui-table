@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.6.0
+        API Docs for: v1.0.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -76,11 +76,11 @@
               
               <div class="file">
                 <pre class="code prettyprint linenums">
-                  import Ember from &#x27;ember&#x27;;
+                  import { empty, filterBy } from &#x27;@ember/object/computed&#x27;;
+              import { A as emberArray } from &#x27;@ember/array&#x27;;
+              import EmberObject from &#x27;@ember/object&#x27;;
               import Row from &#x27;ember-semantic-ui-table/classes/row&#x27;;
               import Column from &#x27;ember-semantic-ui-table/classes/column&#x27;;
-              
-              const { computed, A: emberArray, Object: EmberObject } = Ember;
               
               /**
                * @class Table
@@ -109,42 +109,42 @@
                  * @type Boolean
                  * @public
                  */
-                isEmpty: computed.empty(&#x27;rows&#x27;).readOnly(),
+                isEmpty: empty(&#x27;rows&#x27;).readOnly(),
               
                 /**
                  * @property selectedRows
                  * @type Ember.Array
                  * @public
                  */
-                selectedRows: computed.filterBy(&#x27;rows&#x27;, &#x27;selected&#x27;, true).readOnly(),
+                selectedRows: filterBy(&#x27;rows&#x27;, &#x27;selected&#x27;, true).readOnly(),
               
                 /**
                  * @property hideableColumns
                  * @type Ember.Array
                  * @public
                  */
-                hideableColumns: computed.filterBy(&#x27;columns&#x27;, &#x27;hideable&#x27;, true).readOnly(),
+                hideableColumns: filterBy(&#x27;columns&#x27;, &#x27;hideable&#x27;, true).readOnly(),
               
                 /**
                  * @property hiddenColumns
                  * @type Ember.Array
                  * @public
                  */
-                hiddenColumns: computed.filterBy(&#x27;columns&#x27;, &#x27;hidden&#x27;, true).readOnly(),
+                hiddenColumns: filterBy(&#x27;columns&#x27;, &#x27;hidden&#x27;, true).readOnly(),
               
                 /**
                  * @property visibleColumns
                  * @type Ember.Array
                  * @public
                  */
-                visibleColumns: computed.filterBy(&#x27;columns&#x27;, &#x27;hidden&#x27;, false).readOnly(),
+                visibleColumns: filterBy(&#x27;columns&#x27;, &#x27;hidden&#x27;, false).readOnly(),
               
                 /**
                  * @property sortedColumns
                  * @type Ember.Array
                  * @public
                  */
-                sortedColumns: computed.filterBy(&#x27;columns&#x27;, &#x27;sorted&#x27;, true).readOnly()
+                sortedColumns: filterBy(&#x27;columns&#x27;, &#x27;sorted&#x27;, true).readOnly()
               }) {
                 /**
                  * @class Table

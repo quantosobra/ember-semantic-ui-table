@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v0.6.0
+        API Docs for: v1.0.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -76,16 +76,15 @@
               
               <div class="file">
                 <pre class="code prettyprint linenums">
-                  import Ember from &#x27;ember&#x27;;
+                  import { alias } from &#x27;@ember/object/computed&#x27;;
+              import Component from &#x27;@ember/component&#x27;;
               import layout from &#x27;../templates/components/ui-thead&#x27;;
-              
-              const { Component, computed } = Ember;
               
               export default Component.extend({
                 layout,
                 tagName: &#x27;thead&#x27;,
               
-                columns: computed.alias(&#x27;table.visibleColumns&#x27;).readOnly()
+                columns: alias(&#x27;table.visibleColumns&#x27;).readOnly()
               
                 /**
                  * @event onHeaderClick

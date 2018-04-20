@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-table",
         "description": "Semantic UI Table component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-table",
-        "version": "v0.6.0"
+        "version": "v1.0.0"
     },
     "files": {
         "addon/classes/column.js": {
@@ -89,7 +89,7 @@
             "extension_for": [],
             "namespace": "SemanticUI",
             "file": "addon/classes/column.js",
-            "line": 5,
+            "line": 3,
             "extends": "Ember.Object"
         },
         "SemanticUI.Row": {
@@ -102,7 +102,7 @@
             "extension_for": [],
             "namespace": "SemanticUI",
             "file": "addon/classes/row.js",
-            "line": 5,
+            "line": 4,
             "extends": "Ember.ObjectProxy"
         },
         "SemanticUI.Table": {
@@ -149,7 +149,7 @@
     "classitems": [
         {
             "file": "addon/classes/column.js",
-            "line": 11,
+            "line": 9,
             "description": "Label for the column header.",
             "itemtype": "property",
             "name": "label",
@@ -162,7 +162,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 21,
+            "line": 19,
             "description": "Path to the value displayed in this column.",
             "itemtype": "property",
             "name": "label",
@@ -174,7 +174,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 30,
+            "line": 28,
             "description": "Type of the header for this column. The type is mapped to a component\nname prefixed with `table-header/`. To create custom header types, you\ncan create a new component named `table-header/my-custom-header` and\nspecify it here as `headerType: 'my-custom-header'`.",
             "itemtype": "property",
             "name": "headerType",
@@ -187,7 +187,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 43,
+            "line": 41,
             "description": "Type of the cells for this column. The type is mapped to a component name\nprefixed with `table-cell/`. To create custom cell types, you can create\na new component named `table-cell/my-custom-cell` specify it here as\n`cellType: 'my-custom-cell'`.",
             "itemtype": "property",
             "name": "cellType",
@@ -200,7 +200,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 56,
+            "line": 54,
             "description": "Whether the column can be hidden.",
             "itemtype": "property",
             "name": "hideable",
@@ -213,7 +213,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 66,
+            "line": 64,
             "description": "Whether the column is hidden.",
             "itemtype": "property",
             "name": "hidden",
@@ -226,7 +226,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 76,
+            "line": 74,
             "description": "Whether the column is visible.",
             "itemtype": "property",
             "name": "visible",
@@ -239,7 +239,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 93,
+            "line": 91,
             "description": "Whether the column can be sorted.",
             "itemtype": "property",
             "name": "sortable",
@@ -252,7 +252,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 103,
+            "line": 101,
             "description": "Whether the column is sorted.",
             "itemtype": "property",
             "name": "sorted",
@@ -265,7 +265,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 113,
+            "line": 111,
             "description": "The sort direction when `sorted` is `true`. Either 'ascending' or 'descending'.",
             "itemtype": "property",
             "name": "direction",
@@ -277,7 +277,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 122,
+            "line": 120,
             "description": "Text alignment for the column header and respective cells. Possible\nvalues are `'left'`, `'center'` and `'right'`.",
             "itemtype": "property",
             "name": "align",
@@ -290,7 +290,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 133,
+            "line": 131,
             "description": "Vertical alignment for the column header and respective cells. Possible\nvalues are `'top'`, `'middle'` and `'bottom'`.",
             "itemtype": "property",
             "name": "verticalAlign",
@@ -303,7 +303,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 144,
+            "line": 142,
             "description": "Column width specified as in Semantic UI grid size (e.g. 'ten wide').",
             "itemtype": "property",
             "name": "width",
@@ -316,7 +316,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 154,
+            "line": 152,
             "description": "Whether the column is collapsing so that it only uses as much space\nas required.",
             "itemtype": "property",
             "name": "collapsing",
@@ -329,7 +329,7 @@
         },
         {
             "file": "addon/classes/column.js",
-            "line": 165,
+            "line": 163,
             "description": "Whether the cells in this column can be edited. Must be used together\nwith a `cellType` that supports editing.",
             "itemtype": "property",
             "name": "editable",
@@ -342,7 +342,7 @@
         },
         {
             "file": "addon/classes/row.js",
-            "line": 11,
+            "line": 10,
             "description": "Whether the row is currently selected.",
             "itemtype": "property",
             "name": "selected",
@@ -355,7 +355,7 @@
         },
         {
             "file": "addon/classes/row.js",
-            "line": 21,
+            "line": 20,
             "description": "Whether the row is currently expanded.",
             "itemtype": "property",
             "name": "expanded",
@@ -368,7 +368,7 @@
         },
         {
             "file": "addon/classes/row.js",
-            "line": 31,
+            "line": 30,
             "description": "Whether thw row is currently being edited.",
             "itemtype": "property",
             "name": "editing",
@@ -381,7 +381,7 @@
         },
         {
             "file": "addon/classes/row.js",
-            "line": 41,
+            "line": 40,
             "description": "Content for this row. See {{#crossLink \"Ember.ObjectProxy\"}}{{/crossLink}}.",
             "itemtype": "property",
             "name": "content",
@@ -393,7 +393,7 @@
         },
         {
             "file": "addon/classes/row.js",
-            "line": 52,
+            "line": 51,
             "itemtype": "method",
             "name": "create",
             "params": [
@@ -589,7 +589,7 @@
         },
         {
             "file": "addon/components/table-cell/default.js",
-            "line": 26,
+            "line": 24,
             "itemtype": "event",
             "name": "onClick",
             "params": [
@@ -619,7 +619,7 @@
         },
         {
             "file": "addon/components/table-cell/default.js",
-            "line": 34,
+            "line": 32,
             "itemtype": "event",
             "name": "onDoubleClick",
             "params": [
@@ -649,7 +649,7 @@
         },
         {
             "file": "addon/components/table-header/default.js",
-            "line": 30,
+            "line": 28,
             "itemtype": "event",
             "name": "onClick",
             "params": [
@@ -674,7 +674,7 @@
         },
         {
             "file": "addon/components/table-header/default.js",
-            "line": 37,
+            "line": 35,
             "itemtype": "event",
             "name": "onDoubleClick",
             "params": [
@@ -1012,7 +1012,7 @@
         },
         {
             "file": "addon/components/ui-thead.js",
-            "line": 12,
+            "line": 11,
             "itemtype": "event",
             "name": "onHeaderClick",
             "params": [
@@ -1037,7 +1037,7 @@
         },
         {
             "file": "addon/components/ui-thead.js",
-            "line": 19,
+            "line": 18,
             "itemtype": "event",
             "name": "onHeaderDoubleClick",
             "params": [
@@ -1062,7 +1062,7 @@
         },
         {
             "file": "addon/components/ui-tr.js",
-            "line": 24,
+            "line": 22,
             "itemtype": "event",
             "name": "onClick",
             "params": [
@@ -1087,7 +1087,7 @@
         },
         {
             "file": "addon/components/ui-tr.js",
-            "line": 31,
+            "line": 29,
             "itemtype": "event",
             "name": "onDoubleClick",
             "params": [
@@ -1112,7 +1112,7 @@
         },
         {
             "file": "addon/components/ui-tr.js",
-            "line": 38,
+            "line": 36,
             "itemtype": "event",
             "name": "onCellClick",
             "params": [
@@ -1142,7 +1142,7 @@
         },
         {
             "file": "addon/components/ui-tr.js",
-            "line": 46,
+            "line": 44,
             "itemtype": "event",
             "name": "onCellDoubleClick",
             "params": [
