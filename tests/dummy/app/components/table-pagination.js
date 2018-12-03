@@ -1,6 +1,6 @@
 // BEGIN-SNIPPET components-table-pagination
 import { reads } from '@ember/object/computed';
-
+import { invokeAction } from 'ember-invoke-action';
 import { computed } from '@ember/object';
 import Component from '@ember/component';
 import layout from '../templates/components/table-pagination';
@@ -60,7 +60,7 @@ export default Component.extend({
       let page = parseInt(pageNumber);
 
       if (!isNaN(page)) {
-        this.sendAction('onPageChange', page);
+        invokeAction(this, 'onPageChange', page);
       }
     }
   }

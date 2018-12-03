@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { invokeAction } from 'ember-invoke-action';
 import CellAlignment from 'ember-semantic-ui-table/mixins/cell-alignment';
 import layout from 'ember-semantic-ui-table/templates/components/table-cell/default';
 
@@ -11,12 +12,12 @@ export default Component.extend(CellAlignment, {
 
   click(e) {
     let { row, column, table } = this.getProperties('row', 'column', 'table');
-    this.sendAction('onClick', e, row, column, table);
+    invokeAction(this, 'onClick', e, row, column, table);
   },
 
   doubleClick(e) {
     let { row, column, table } = this.getProperties('row', 'column', 'table');
-    this.sendAction('onDoubleClick', e, row, column, table);
+    invokeAction(this, 'onDoubleClick', e, row, column, table);
   }
 
   // Events

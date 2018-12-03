@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { invokeAction } from 'ember-invoke-action';
 import layout from '../templates/components/ui-tr';
 
 export default Component.extend({
@@ -9,12 +10,12 @@ export default Component.extend({
 
   click(e) {
     let { row, table } = this.getProperties('row', 'table');
-    this.sendAction('onClick', e, row, table);
+    invokeAction(this, 'onClick', e, row, table);
   },
 
   doubleClick(e) {
     let { row, table } = this.getProperties('row', 'table');
-    this.sendAction('onDoubleClick', e, row, table);
+    invokeAction(this, 'onDoubleClick', e, row, table);
   }
 
   // Events
