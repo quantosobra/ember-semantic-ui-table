@@ -14,7 +14,7 @@
   }
 
 module.exports = {
-  name: 'ember-semantic-ui-table',
+  name: require('./package').name,
 
   included() {
     let findHost = this._findHost || findHostShim;

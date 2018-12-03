@@ -1,22 +1,24 @@
-{{#with (hash
-  head=(component "ui-thead"
-    table=table
-    onHeaderClick=onHeaderClick
-    onHeaderDoubleClick=onHeaderDoubleClick
+{{#with
+  (hash
+    head=(component "ui-thead"
+      table=table
+      onHeaderClick=onHeaderClick
+      onHeaderDoubleClick=onHeaderDoubleClick
+    )
+    body=(component "ui-tbody"
+      table=table
+      expandedRowComponent=expandedRowComponent
+      onCellClick=onCellClick
+      onCellDoubleClick=onCellDoubleClick
+      onRowClick=onRowClick
+      onRowDoubleClick=onRowDoubleClick
+    )
+    foot=(component "ui-tfoot"
+      table=table
+    )
   )
-  body=(component "ui-tbody"
-    table=table
-    expandedRowComponent=expandedRowComponent
-    onCellClick=onCellClick
-    onCellDoubleClick=onCellDoubleClick
-    onRowClick=onRowClick
-    onRowDoubleClick=onRowDoubleClick
-  )
-  foot=(component "ui-tfoot"
-    table=table
-  )
-) as |ui|}}
-
+  as |ui|
+}}
   {{#if hasBlock}}
     {{yield ui}}
   {{else}}
@@ -24,5 +26,4 @@
     {{ui.body}}
     {{ui.foot}}
   {{/if}}
-
 {{/with}}

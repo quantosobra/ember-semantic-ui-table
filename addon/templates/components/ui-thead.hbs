@@ -1,6 +1,7 @@
 <tr>
   {{#each columns as |column|}}
-    {{component (concat "table-header/" column.headerType)
+    {{component
+      (concat "table-header/" column.headerType)
       column=column
       table=table
       onClick=onHeaderClick
