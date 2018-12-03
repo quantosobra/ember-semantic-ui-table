@@ -23,7 +23,8 @@
     <div class="ui active centered inline text loader">Loading</div>
   </div>
 {{else}}
-  {{#ui-table table
+  {{#ui-table
+    table
     class="bottom attached"
     rowSelection=true
     onHeaderClick=(action "sortColumn")
@@ -37,11 +38,16 @@
     {{/t.body}}
     {{#t.foot}}
       <tr>
-        <th colspan="{{table.visibleColumns.length}}">
+        <th colspan={{table.visibleColumns.length}}>
           <span>
             {{table.selectedRows.length}} rows selected
           </span>
-          {{table-pagination class="right floated" totalPages=pageCount currentPage=page onPageChange=(action "navigateToPage")}}
+          {{table-pagination
+            class="right floated"
+            totalPages=pageCount
+            currentPage=page
+            onPageChange=(action "navigateToPage")
+          }}
         </th>
       </tr>
     {{/t.foot}}

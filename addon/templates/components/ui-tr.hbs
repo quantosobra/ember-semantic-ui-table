@@ -1,5 +1,6 @@
 {{#each table.visibleColumns as |column|}}
-  {{component (concat "table-cell/" column.cellType)
+  {{component
+    (concat "table-cell/" column.cellType)
     column=column
     row=row
     index=index

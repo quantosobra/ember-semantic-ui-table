@@ -1,11 +1,11 @@
 {{! BEGIN-SNIPPET templates-table-pagination }}
-<a class="icon item {{if (eq firstPage currentPage) 'disabled'}}" href="#" {{action 'pageSelected' firstPage}}>
+<a class="icon item {{if (eq firstPage currentPage) "disabled"}}" href="#" {{action "pageSelected" firstPage}}>
   <i class="angle double left icon"></i>
 </a>
-<a class="icon item {{if (not previousPage) 'disabled'}}" href="#" {{action 'pageSelected' previousPage}}>
+<a class="icon item {{if (not previousPage) "disabled"}}" href="#" {{action "pageSelected" previousPage}}>
   <i class="angle left icon"></i>
 </a>
-{{#ui-dropdown class="item search" selected=currentPage onChange=(action "pageSelected") as |execute mapper|}}
+{{#ui-dropdown class="item search" selected=currentPage onChange=(action "pageSelected")}}
   <div class="default text">Types</div>
   <i class="dropdown icon"></i>
   <div class="menu">
@@ -16,10 +16,10 @@
     {{/each}}
   </div>
 {{/ui-dropdown}}
-<a class="icon item {{if (not nextPage) 'disabled'}}" href="#" {{action 'pageSelected' nextPage}}>
+<a class="icon item {{if (not nextPage) "disabled"}}" href="#" {{action "pageSelected" nextPage}}>
   <i class="angle right icon"></i>
 </a>
-<a class="icon item {{if (eq lastPage currentPage) 'disabled'}}" href="#" {{action 'pageSelected' lastPage}}>
+<a class="icon item {{if (eq lastPage currentPage) "disabled"}}" href="#" {{action "pageSelected" lastPage}}>
   <i class="angle double right icon"></i>
 </a>
 {{! END-SNIPPET templates-table-pagination }}
