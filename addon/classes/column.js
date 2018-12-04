@@ -19,7 +19,7 @@ export default EmberObject.extend({
   /**
    * Path to the value displayed in this column.
    *
-   * @property label
+   * @property valuePath
    * @type String
    * @public
    */
