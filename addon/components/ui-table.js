@@ -152,7 +152,7 @@ const UiTable = Component.extend({
   /**
    * Whether the table cells have less spacing to the content.
    *
-   * @property padded
+   * @property compact
    * @type Boolean
    * @default false
    * @public
@@ -182,7 +182,7 @@ const UiTable = Component.extend({
   /**
    * Component to display an expanded row.
    *
-   * @property expandedRow
+   * @property expandedRowComponent
    * @type String|Ember.Component
    * @default null
    * @public
