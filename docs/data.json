@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-table",
         "description": "Semantic UI Table component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-table",
-        "version": "v1.0.0"
+        "version": "v2.0.0"
     },
     "files": {
         "addon/classes/column.js": {
@@ -165,7 +165,7 @@
             "line": 19,
             "description": "Path to the value displayed in this column.",
             "itemtype": "property",
-            "name": "label",
+            "name": "valuePath",
             "type": "String",
             "access": "public",
             "tagname": "",
@@ -589,7 +589,7 @@
         },
         {
             "file": "addon/components/table-cell/default.js",
-            "line": 24,
+            "line": 25,
             "itemtype": "event",
             "name": "onClick",
             "params": [
@@ -619,7 +619,7 @@
         },
         {
             "file": "addon/components/table-cell/default.js",
-            "line": 32,
+            "line": 33,
             "itemtype": "event",
             "name": "onDoubleClick",
             "params": [
@@ -649,7 +649,7 @@
         },
         {
             "file": "addon/components/table-header/default.js",
-            "line": 28,
+            "line": 29,
             "itemtype": "event",
             "name": "onClick",
             "params": [
@@ -674,7 +674,7 @@
         },
         {
             "file": "addon/components/table-header/default.js",
-            "line": 35,
+            "line": 36,
             "itemtype": "event",
             "name": "onDoubleClick",
             "params": [
@@ -953,7 +953,7 @@
             "line": 152,
             "description": "Whether the table cells have less spacing to the content.",
             "itemtype": "property",
-            "name": "padded",
+            "name": "compact",
             "type": "Boolean",
             "default": "false",
             "access": "public",
@@ -992,7 +992,7 @@
             "line": 182,
             "description": "Component to display an expanded row.",
             "itemtype": "property",
-            "name": "expandedRow",
+            "name": "expandedRowComponent",
             "type": "String|Ember.Component",
             "default": "null",
             "access": "public",
@@ -1062,7 +1062,7 @@
         },
         {
             "file": "addon/components/ui-tr.js",
-            "line": 22,
+            "line": 23,
             "itemtype": "event",
             "name": "onClick",
             "params": [
@@ -1087,7 +1087,7 @@
         },
         {
             "file": "addon/components/ui-tr.js",
-            "line": 29,
+            "line": 30,
             "itemtype": "event",
             "name": "onDoubleClick",
             "params": [
@@ -1112,7 +1112,7 @@
         },
         {
             "file": "addon/components/ui-tr.js",
-            "line": 36,
+            "line": 37,
             "itemtype": "event",
             "name": "onCellClick",
             "params": [
@@ -1142,7 +1142,7 @@
         },
         {
             "file": "addon/components/ui-tr.js",
-            "line": 44,
+            "line": 45,
             "itemtype": "event",
             "name": "onCellDoubleClick",
             "params": [

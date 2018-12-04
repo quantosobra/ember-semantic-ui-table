@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v1.0.0
+        API Docs for: v2.0.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -77,6 +77,7 @@
               <div class="file">
                 <pre class="code prettyprint linenums">
                   import Component from &#x27;@ember/component&#x27;;
+              import { invokeAction } from &#x27;ember-invoke-action&#x27;;
               import CellAlignment from &#x27;ember-semantic-ui-table/mixins/cell-alignment&#x27;;
               import layout from &#x27;ember-semantic-ui-table/templates/components/table-header/default&#x27;;
               
@@ -93,12 +94,12 @@
               
                 click(e) {
                   let { column, table } = this.getProperties(&#x27;column&#x27;, &#x27;table&#x27;);
-                  this.sendAction(&#x27;onClick&#x27;, e, column, table);
+                  invokeAction(this, &#x27;onClick&#x27;, e, column, table);
                 },
               
                 doubleClick(e) {
                   let { column, table } = this.getProperties(&#x27;column&#x27;, &#x27;table&#x27;);
-                  this.sendAction(&#x27;onDoubleClick&#x27;, e, column, table);
+                  invokeAction(this, &#x27;onDoubleClick&#x27;, e, column, table);
                 }
               
                 // Events
