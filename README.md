@@ -60,6 +60,15 @@ Then, in your template, use the `ui-table` component and pass the table object f
 
 You can see more advanced examples in the [demo page](http://quantosobra.github.io/ember-semantic-ui-table).
 
+## Development
+
+To release and publish a new version, use the commands:
+
+```
+ember release (--major|--minor|--patch)
+yarn publish
+```
+
 ## License
 
 This project is developed at [QuantoSobra](https://www.quantosobra.com.br) and licensed under the MIT license.
