@@ -15,6 +15,11 @@
 ember install ember-semantic-ui-table
 ```
 
+## Compatibility
+
+- Ember.js v2.18 or above
+- Ember CLI v2.13 or above
+
 ## Helpful Links
 
 - ### [Live Demo](http://quantosobra.github.io/ember-semantic-ui-table)
