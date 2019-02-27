@@ -4188,10 +4188,10 @@ ember-assign-polyfill@^2.6.0:
     ember-cli-babel "^6.16.0"
     ember-cli-version-checker "^2.0.0"
 
-ember-auto-import@^1.2.13, ember-auto-import@^1.2.19:
-  version "1.2.20"
-  resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-1.2.20.tgz#c90675e1e32bd99ce70e696326813c6c55bdac19"
-  integrity sha512-HZ9ZC5VMPF0KtpTII4US1QYtq8qHxlYgwWOMaxwWG9c9v12UpH8paVuUs2MjUEJCbas6sXOkMb6gY41xASGrWA==
+ember-auto-import@^1.2.19, ember-auto-import@^1.2.21:
+  version "1.2.21"
+  resolved "https://registry.yarnpkg.com/ember-auto-import/-/ember-auto-import-1.2.21.tgz#e02ded183844faba66c3f2af97028ef35175b837"
+  integrity sha512-coHnqO3mRnlj/JAQSQBEqzX2wL8rH5YrfEJMzk1102X9MdSX1CWeaUYBcyjvI/pG8fHUhv+4VsD6rQuhTUyZUQ==
   dependencies:
     "@babel/core" "^7.1.6"
     "@babel/traverse" "^7.1.6"
@@ -4216,7 +4216,7 @@ ember-auto-import@^1.2.13, ember-auto-import@^1.2.19:
     rimraf "^2.6.2"
     symlink-or-copy "^1.2.0"
     walk-sync "^0.3.3"
-    webpack "^4.12.0"
+    webpack "~4.28"
 
 ember-cli-babel-plugin-helpers@^1.0.0:
   version "1.0.2"
@@ -4722,10 +4722,10 @@ ember-get-config@^0.2.2:
   dependencies:
     ember-cli-babel "^6.6.0"
 
-ember-intl@3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/ember-intl/-/ember-intl-3.5.0.tgz#40efd9e5c369943f1d1178a97a780e02a05b3dde"
-  integrity sha512-jm4Kr5vFE8MJZ+mNTvrxhtyE7z9Xdo0xJbmcavvg/aBDBM3MytPTotILA2febVLP2dVUtrDcRfL6CDHY+H27rA==
+ember-intl@3.5.2:
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/ember-intl/-/ember-intl-3.5.2.tgz#9db9205c679dcc13e164453b19997916f3b5b58f"
+  integrity sha512-rrgWX1D0nKkx3qSWxSqyQkuyXXDw8UYel8T7QBkOldTzOOlN+sJadvbyQW6HuN7RBJ9Bd2XfkDn16QwpCxGsiQ==
   dependencies:
     "@ember-intl/intl-messageformat" "^2.2.0"
     "@ember-intl/intl-messageformat-parser" "^1.4.0"
@@ -4737,7 +4737,7 @@ ember-intl@3.5.0:
     broccoli-source "^1.1.0"
     broccoli-stew "^2.0.0"
     cldr-core "28.0.0"
-    ember-auto-import "^1.2.13"
+    ember-auto-import "^1.2.21"
     ember-cli-babel "^7.1.2"
     extend "^3.0.2"
     fast-memoize "^2.5.1"
@@ -5165,11 +5165,6 @@ espree@^4.0.0:
     acorn "^6.0.2"
     acorn-jsx "^5.0.0"
     eslint-visitor-keys "^1.0.0"
-
-esprima@^2.6.0:
-  version "2.7.3"
-  resolved "https://registry.yarnpkg.com/esprima/-/esprima-2.7.3.tgz#96e3b70d5779f6ad49cd032673d1c312767ba581"
-  integrity sha1-luO3DVd59q1JzQMmc9HDEnZ7pYE=
 
 esprima@^4.0.0:
   version "4.0.0"
@@ -6453,15 +6448,10 @@ has-unicode@^1.0.0:
   resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-1.0.1.tgz#c46fceea053eb8ec789bffbba25fca52dfdcf38e"
   integrity sha1-xG/O6gU+uOx4m/+7ol/KUt/c844=
 
-has-unicode@^2.0.0, has-unicode@^2.0.1:
+has-unicode@^2.0.0, has-unicode@^2.0.1, has-unicode@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
   integrity sha1-4Ob+aijPUROIVeCG0Wkedx3iqLk=
-
-has-unicode@~2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-2.0.0.tgz#a3cd96c307ba41d559c5a2ee408c12a11c4c2ec3"
-  integrity sha1-o82Wwwe6QdVZxaLuQIwSoRxMLsM=
 
 has-value@^0.3.1:
   version "0.3.1"
@@ -7348,21 +7338,13 @@ js-tokens@^3.0.2:
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
   integrity sha1-mGbfOVECEw449/mWvOtlRDIJwls=
 
-js-yaml@^3.12.0:
+js-yaml@^3.12.0, js-yaml@^3.2.5, js-yaml@^3.2.7:
   version "3.12.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.12.0.tgz#eaed656ec8344f10f527c6bfa1b6e2244de167d1"
   integrity sha512-PIt2cnwmPfL4hKNwqeiuz4bKfnzHTBv6HyVgjahA6mPLwPDzjDWrplJBMjHUFxku/N3FlmrbyPclad+I+4mJ3A==
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
-
-js-yaml@^3.2.5, js-yaml@^3.2.7:
-  version "3.7.0"
-  resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
-  integrity sha1-XJZ93YN6m/3KXy3oQlOr6KHAO4A=
-  dependencies:
-    argparse "^1.0.7"
-    esprima "^2.6.0"
 
 jsbn@~0.1.0:
   version "0.1.0"
@@ -12133,10 +12115,10 @@ webpack-sources@^1.1.0, webpack-sources@^1.3.0:
     source-list-map "^2.0.0"
     source-map "~0.6.1"
 
-webpack@^4.12.0:
-  version "4.27.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.27.0.tgz#1db66f03f0239bf797827f0580f53a41abd4067c"
-  integrity sha512-y77EQNIlsB9fUGgpLv/ZzmH+Yd9DgyIF9omX9RFavR5ZFM6HxFm6sqkbBXYxpjbKej9K6hD+Y8qEVg2rWdI2gg==
+webpack@~4.28:
+  version "4.28.4"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.28.4.tgz#1ddae6c89887d7efb752adf0c3cd32b9b07eacd0"
+  integrity sha512-NxjD61WsK/a3JIdwWjtIpimmvE6UrRi3yG54/74Hk9rwNj5FPkA4DJCf1z4ByDWLkvZhTZE+P3C/eh6UD5lDcw==
   dependencies:
     "@webassemblyjs/ast" "1.7.11"
     "@webassemblyjs/helper-module-context" "1.7.11"
