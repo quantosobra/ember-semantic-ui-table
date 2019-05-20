@@ -19,6 +19,7 @@ ember install ember-semantic-ui-table
 
 - Ember.js v2.18 or above
 - Ember CLI v2.13 or above
+- Node.js v8 or above
 
 ## Helpful Links
 
@@ -79,4 +80,4 @@ yarn publish
 This project is developed at [QuantoSobra](https://www.quantosobra.com.br) and licensed under the MIT license.
 See the [LICENSE.md](LICENSE.md) file for the full license text.
 
-QuantoSobra &copy; 2017
+QuantoSobra &copy; 2017-2019
