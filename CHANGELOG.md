@@ -1,5 +1,10 @@
 # Changelog
 
+## 3.0.0 (2019-05-22)
+
+* Update to ember-cli-babel 7.x
+* Drop support for NodeJS 6.x
+
 ## 2.0.0 (2018-12-04)
 
 * [[#7](https://github.com/quantosobra/ember-semantic-ui-table/pull/7)] Update Ember CLI
