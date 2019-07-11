@@ -18,7 +18,7 @@ module('Integration | Component | table cell/default', function(hooks) {
   test('collapsing column has class `collapsing`', async function(assert) {
     assert.expect(1);
 
-    this.set('column', new Column({ collapsing: true }));
+    this.set('column', Column.create({ collapsing: true }));
     await render(hbs`{{table-cell/default column=column}}`);
 
     assert.ok(find('td').classList.contains('collapsing'));

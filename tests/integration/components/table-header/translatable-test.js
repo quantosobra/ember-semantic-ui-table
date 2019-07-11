@@ -17,7 +17,7 @@ module('Integration | Component | table header/translatable', function(hooks) {
   test('header label is translated', async function(assert) {
     assert.expect(1);
 
-    this.set('column', new Column({ label: 'labels.first_name' }));
+    this.set('column', Column.create({ label: 'labels.first_name' }));
     await render(hbs`{{table-header/translatable column=column}}`);
 
     return settled().then(() => {

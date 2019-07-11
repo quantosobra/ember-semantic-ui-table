@@ -18,7 +18,7 @@ module('Integration | Component | table header/default', function(hooks) {
   test('sortable column has class `sortable`', async function(assert) {
     assert.expect(1);
 
-    this.set('column', new Column({ sortable: true }));
+    this.set('column', Column.create({ sortable: true }));
     await render(hbs`{{table-header/default column=column}}`);
 
     assert.ok(find('th').classList.contains('sortable'));
@@ -27,7 +27,7 @@ module('Integration | Component | table header/default', function(hooks) {
   test('sorted column has class `sorted`', async function(assert) {
     assert.expect(1);
 
-    this.set('column', new Column({ sorted: true }));
+    this.set('column', Column.create({ sorted: true }));
     await render(hbs`{{table-header/default column=column}}`);
 
     assert.ok(find('th').classList.contains('sorted'));
@@ -36,7 +36,7 @@ module('Integration | Component | table header/default', function(hooks) {
   test('collapsing column has class `collapsing`', async function(assert) {
     assert.expect(1);
 
-    this.set('column', new Column({ collapsing: true }));
+    this.set('column', Column.create({ collapsing: true }));
     await render(hbs`{{table-header/default column=column}}`);
 
     assert.ok(find('th').classList.contains('collapsing'));
@@ -45,7 +45,7 @@ module('Integration | Component | table header/default', function(hooks) {
   test('column configured with width has correct class', async function(assert) {
     assert.expect(2);
 
-    this.set('column', new Column({ width: 'ten wide' }));
+    this.set('column', Column.create({ width: 'ten wide' }));
     await render(hbs`{{table-header/default column=column}}`);
 
     assert.ok(find('th').classList.contains('ten'));
