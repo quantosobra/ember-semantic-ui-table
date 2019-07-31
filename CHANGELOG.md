@@ -1,5 +1,11 @@
 # Changelog
 
+## 4.0.0 (2019-07-31)
+
+* [[#124](https://github.com/quantosobra/ember-semantic-ui-table/pull/124)] [BREAKING] Convert native class Table to extend from EmberObject
+
+To upgrade you need to change all usages of `new Table` with `Table.create`. All arguments remain the same, e.g. `new Table(columns, rows)` should be replaced with `Table.create(columns, rows)`.
+
 ## 3.0.0 (2019-05-22)
 
 * Update to ember-cli-babel 7.x
