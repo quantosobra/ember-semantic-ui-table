@@ -21,7 +21,7 @@ module('Integration | Component | ui tbody', function(hooks) {
     let columns = [{ label: 'Column', valuePath: 'text' }];
     let rows = [{ text: 'This is a test' }];
 
-    this.set('table', new Table(columns, rows));
+    this.set('table', Table.create(columns, rows));
     await render(hbs`{{#ui-tbody table=table}}Table is empty{{/ui-tbody}}`);
 
     assert.equal(findAll('tr').length, 1);
@@ -32,7 +32,7 @@ module('Integration | Component | ui tbody', function(hooks) {
   test('it renders block content when table is empty', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{#ui-tbody table=table}}Table is empty{{/ui-tbody}}`);
 
     assert.equal(this.element.textContent.trim(), 'Table is empty');
@@ -44,7 +44,7 @@ module('Integration | Component | ui tbody', function(hooks) {
     let columns = [{ label: 'Column', valuePath: 'text' }];
     let rows = [{ text: 'This is a test' }];
 
-    this.set('table', new Table(columns, rows));
+    this.set('table', Table.create(columns, rows));
     await render(hbs`{{#ui-tbody table=table expandedRowComponent="expanded-profile-row"}}{{/ui-tbody}}`);
 
     assert.equal(findAll('tr').length, 1);

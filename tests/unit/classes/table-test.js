@@ -7,7 +7,7 @@ module('Unit | Classes | table', function() {
   test('Column instances are created when passed plain objects to table constructor', function(assert) {
     assert.expect(2);
 
-    let table = new Table([
+    let table = Table.create([
       {
         label: 'Column',
         valuePath: 'value'
@@ -22,7 +22,7 @@ module('Unit | Classes | table', function() {
   test('should not create a new Column object if a Column instance is provided', function(assert) {
     assert.expect(2);
 
-    let table = new Table([
+    let table = Table.create([
       Column.create({ label: 'Column' })
     ]);
 
@@ -34,7 +34,7 @@ module('Unit | Classes | table', function() {
   test('Row instances are created when passed plain objects to table constructor', function(assert) {
     assert.expect(2);
 
-    let table = new Table([], [
+    let table = Table.create([], [
       { foo: 'bar' }
     ]);
 
@@ -46,7 +46,7 @@ module('Unit | Classes | table', function() {
   test('should not create a new Row object if a Row instance is provided', function(assert) {
     assert.expect(2);
 
-    let table = new Table([], [
+    let table = Table.create([], [
       Row.create({ foo: 'bar' })
     ]);
 

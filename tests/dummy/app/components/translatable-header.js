@@ -38,7 +38,7 @@ export default Component.extend(Columns, {
   }),
 
   table: computed('columns', 'rows', function() {
-    return new Table(this.get('columns'), this.get('model'));
+    return Table.create(this.get('columns'), this.get('model'));
   })
 });
 // END-SNIPPET components-translatable-header

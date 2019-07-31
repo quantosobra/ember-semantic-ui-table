@@ -13,7 +13,7 @@ module('Integration | Component | table cell/row number', function(hooks) {
     let columns = [{ cellType: 'row-number' }];
     let rows = [{ text: 'Dummy' }, { text: 'Dummy' }, { text: 'Dummy' }];
 
-    this.set('table', new Table(columns, rows));
+    this.set('table', Table.create(columns, rows));
     await render(hbs`{{ui-tbody table=table}}`);
 
     assert.equal(findAll('tr').length, 3);

@@ -44,7 +44,7 @@ export default Ember.Component.extend({
     // Data can be from any source
     let rows = this.get('model');
 
-    return new Table([
+    return Table.create([
       {
         label: 'Name',
         valuePath: 'name'
