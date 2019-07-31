@@ -1,6 +1,6 @@
 {
   "name": "ember-semantic-ui-table",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Semantic UI Table component for Ember.",
   "keywords": [
     "ember-addon",
