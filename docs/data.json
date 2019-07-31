@@ -3,7 +3,7 @@
         "name": "ember-semantic-ui-table",
         "description": "Semantic UI Table component for Ember.",
         "url": "http://github.com/quantosobra/ember-semantic-ui-table",
-        "version": "v3.0.0"
+        "version": "v4.0.0"
     },
     "files": {
         "addon/classes/column.js": {
@@ -107,7 +107,7 @@
         },
         "SemanticUI.Table": {
             "name": "SemanticUI.Table",
-            "shortname": "Table",
+            "shortname": "SemanticUI.Table",
             "classitems": [],
             "plugins": [],
             "extensions": [],
@@ -115,22 +115,8 @@
             "extension_for": [],
             "namespace": "SemanticUI",
             "file": "addon/classes/table.js",
-            "line": 71,
-            "is_constructor": 1,
-            "params": [
-                {
-                    "name": "columns",
-                    "description": "",
-                    "type": "Array"
-                },
-                {
-                    "name": "rows",
-                    "description": "",
-                    "type": "Array"
-                }
-            ],
-            "access": "public",
-            "tagname": ""
+            "line": 8,
+            "extends": "Ember.Object"
         },
         "SemanticUI.UiTable": {
             "name": "SemanticUI.UiTable",
@@ -419,7 +405,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 13,
+            "line": 14,
             "itemtype": "property",
             "name": "columns",
             "type": "Ember.Array",
@@ -431,7 +417,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 21,
+            "line": 22,
             "itemtype": "property",
             "name": "rows",
             "type": "Ember.Array",
@@ -443,7 +429,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 29,
+            "line": 30,
             "itemtype": "property",
             "name": "isEmpty",
             "type": "Boolean",
@@ -454,7 +440,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 36,
+            "line": 37,
             "itemtype": "property",
             "name": "selectedRows",
             "type": "Ember.Array",
@@ -465,7 +451,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 43,
+            "line": 44,
             "itemtype": "property",
             "name": "hideableColumns",
             "type": "Ember.Array",
@@ -476,7 +462,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 50,
+            "line": 51,
             "itemtype": "property",
             "name": "hiddenColumns",
             "type": "Ember.Array",
@@ -487,7 +473,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 57,
+            "line": 58,
             "itemtype": "property",
             "name": "visibleColumns",
             "type": "Ember.Array",
@@ -498,7 +484,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 64,
+            "line": 65,
             "itemtype": "property",
             "name": "sortedColumns",
             "type": "Ember.Array",
@@ -509,7 +495,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 90,
+            "line": 72,
             "itemtype": "method",
             "name": "setColumns",
             "params": [
@@ -526,7 +512,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 99,
+            "line": 81,
             "itemtype": "method",
             "name": "setRows",
             "params": [
@@ -543,7 +529,43 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 108,
+            "line": 92,
+            "description": "Create a new Table object.",
+            "itemtype": "method",
+            "name": "create",
+            "params": [
+                {
+                    "name": "columns",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "rows",
+                    "description": "",
+                    "type": "Array",
+                    "optional": true
+                },
+                {
+                    "name": "options",
+                    "description": "",
+                    "type": "Object",
+                    "optional": true
+                }
+            ],
+            "return": {
+                "description": "",
+                "type": "Table"
+            },
+            "access": "public",
+            "tagname": "",
+            "static": 1,
+            "class": "SemanticUI.Table",
+            "namespace": "SemanticUI"
+        },
+        {
+            "file": "addon/classes/table.js",
+            "line": 110,
             "description": "Create a collection of Row objects with the given collection",
             "itemtype": "method",
             "name": "createRows",
@@ -566,7 +588,7 @@
         },
         {
             "file": "addon/classes/table.js",
-            "line": 126,
+            "line": 128,
             "description": "Create a collection of Column objects with the given collection",
             "itemtype": "method",
             "name": "createColumns",

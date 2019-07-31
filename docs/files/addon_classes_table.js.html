@@ -16,7 +16,7 @@
         <h1 class="qs-main-title">ember-semantic-ui-table</h1>
       </div>
       <div class="yui3-u-1-4 version project-version">
-        API Docs for: v3.0.0
+        API Docs for: v4.0.0
       </div>
     </div>
     <div id="bd" class="yui3-g">
@@ -78,6 +78,7 @@
                 <pre class="code prettyprint linenums">
                   import { empty, filterBy } from &#x27;@ember/object/computed&#x27;;
               import { A as emberArray } from &#x27;@ember/array&#x27;;
+              import { assign }  from &#x27;@ember/polyfills&#x27;;
               import EmberObject from &#x27;@ember/object&#x27;;
               import Row from &#x27;ember-semantic-ui-table/classes/row&#x27;;
               import Column from &#x27;ember-semantic-ui-table/classes/column&#x27;;
@@ -87,7 +88,7 @@
                * @extends Ember.Object
                * @namespace SemanticUI
                */
-              export default class Table extends EmberObject.extend({
+              const Table = EmberObject.extend({
                 /**
                  * @property columns
                  * @type Ember.Array
@@ -144,26 +145,7 @@
                  * @type Ember.Array
                  * @public
                  */
-                sortedColumns: filterBy(&#x27;columns&#x27;, &#x27;sorted&#x27;, true).readOnly()
-              }) {
-                /**
-                 * @class Table
-                 * @constructor
-                 * @param  {Array} columns
-                 * @param  {Array} rows
-                 * @public
-                 */
-                constructor(columns = [], rows = []) {
-                  super();
-              
-                  let _columns = emberArray(Table.createColumns(columns));
-                  let _rows = emberArray(Table.createRows(rows));
-              
-                  this.setProperties({
-                    columns: _columns,
-                    rows: _rows
-                  });
-                }
+                sortedColumns: filterBy(&#x27;columns&#x27;, &#x27;sorted&#x27;, true).readOnly(),
               
                 /**
                  * @method setColumns
@@ -172,7 +154,7 @@
                  */
                 setColumns(columns) {
                   this.set(&#x27;columns&#x27;, Table.createColumns(columns));
-                }
+                },
               
                 /**
                  * @method setRows
@@ -181,7 +163,27 @@
                  */
                 setRows(rows) {
                   this.set(&#x27;rows&#x27;, Table.createRows(rows));
-                }
+                },
+              });
+              
+              Table.reopenClass({
+                /**
+                 * Create a new Table object.
+                 *
+                 * @method create
+                 * @param  {Array}  [columns]
+                 * @param  {Array}  [rows]
+                 * @param  {Object} [options]
+                 * @return {Table}
+                 * @public
+                 * @static
+                 */
+                create(columns = [], rows = [], options = {}) {
+                  return this._super(assign({}, options, {
+                    columns: emberArray(Table.createColumns(columns)),
+                    rows: emberArray(Table.createRows(rows)),
+                  }));
+                },
               
                 /**
                  * Create a collection of Row objects with the given collection
@@ -191,7 +193,7 @@
                  * @public
                  * @static
                  */
-                static createRows(rows = [], options = {}) {
+                createRows(rows = [], options = {}) {
                   return rows.map((r) =&gt; {
                     if (r instanceof Row) {
                       return r;
@@ -199,7 +201,7 @@
                       return Row.create(r, options);
                     }
                   });
-                }
+                },
               
                 /**
                  * Create a collection of Column objects with the given collection
@@ -209,7 +211,7 @@
                  * @public
                  * @static
                  */
-                static createColumns(columns = []) {
+                createColumns(columns = []) {
                   return columns.map((c) =&gt; {
                     if (c instanceof Column) {
                       return c;
@@ -217,8 +219,10 @@
                       return Column.create(c);
                     }
                   });
-                }
-              }
+                },
+              });
+              
+              export default Table;
               
                 </pre>
               </div>
