@@ -10,7 +10,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('tag name is table', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table}}`);
 
     assert.ok(findAll('table').length);
@@ -19,7 +19,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('single line table has class `single line`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table singleLine=true}}`);
 
     assert.ok(find('table').className.indexOf('single line') !== -1);
@@ -28,7 +28,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('sortable table has class `sortable`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table sortable=true}}`);
 
     assert.ok(find('table').classList.contains('sortable'));
@@ -37,7 +37,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('not stackable table has class `unstackable`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table stacking=false}}`);
 
     assert.ok(find('table').classList.contains('unstackable'));
@@ -46,7 +46,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('fixed table has class `fixed`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table fixed=true}}`);
 
     assert.ok(find('table').classList.contains('fixed'));
@@ -55,7 +55,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('striped table has class `striped`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table striped=true}}`);
 
     assert.ok(find('table').classList.contains('striped'));
@@ -64,7 +64,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('celled table has class `celled`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table celled=true}}`);
 
     assert.ok(find('table').classList.contains('celled'));
@@ -73,7 +73,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('padded table has class `padded`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table padded=true}}`);
 
     assert.ok(find('table').classList.contains('padded'));
@@ -82,7 +82,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('compact table has class `compact`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table compact=true}}`);
 
     assert.ok(find('table').classList.contains('compact'));
@@ -91,7 +91,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('small table has class `small`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table size="small"}}`);
 
     assert.ok(find('table').classList.contains('small'));
@@ -100,7 +100,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('large table has class `large`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table size="large"}}`);
 
     assert.ok(find('table').classList.contains('large'));
@@ -109,7 +109,7 @@ module('Integration | Component | ui table', function(hooks) {
   test('table with row selection enabled has class `selectable`', async function(assert) {
     assert.expect(1);
 
-    this.set('table', new Table());
+    this.set('table', Table.create());
     await render(hbs`{{ui-table table rowSelection=true}}`);
 
     assert.ok(find('table').classList.contains('selectable'));

@@ -19,7 +19,7 @@ export default Component.extend(Columns, EmberDataTable, {
     let columns = this.get('columns');
     columns[0].sortable = true;
     columns[1].sortable = true;
-    return new Table(columns, []);
+    return Table.create(columns, []);
   }),
 
   actions: {

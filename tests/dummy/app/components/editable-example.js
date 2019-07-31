@@ -52,7 +52,7 @@ export default Component.extend(Columns, {
   }),
 
   table: computed('columns', 'model', function() {
-    return new Table(this.get('columns'), this.get('model'));
+    return Table.create(this.get('columns'), this.get('model'));
   }),
 
   actions: {

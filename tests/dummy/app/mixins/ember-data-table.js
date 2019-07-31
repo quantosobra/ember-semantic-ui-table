@@ -41,7 +41,7 @@ export default Mixin.create({
   isLoading: false,
 
   table: computed(function() {
-    return new Table(this.get('columns'), []);
+    return Table.create(this.get('columns'), []);
   }),
 
   fetchRecords() {

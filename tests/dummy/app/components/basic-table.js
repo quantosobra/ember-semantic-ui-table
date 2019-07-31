@@ -23,7 +23,7 @@ export default Component.extend(Columns, {
   }),
 
   table: computed('columns', 'rows', function() {
-    return new Table(this.get('columns'), this.get('rows'));
+    return Table.create(this.get('columns'), this.get('rows'));
   })
 });
 // END-SNIPPET components-basic-table
