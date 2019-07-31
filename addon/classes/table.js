@@ -90,11 +90,15 @@ const Table = EmberObject.extend({
 
 Table.reopenClass({
   /**
-   * @class Table
-   * @constructor
-   * @param  {Array} columns
-   * @param  {Array} rows
+   * Create a new Table object.
+   *
+   * @method create
+   * @param  {Array}  [columns]
+   * @param  {Array}  [rows]
+   * @param  {Object} [options]
+   * @return {Table}
    * @public
+   * @static
    */
   create(columns = [], rows = [], options = {}) {
     return this._super(assign({}, options, {
