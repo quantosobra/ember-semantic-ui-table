@@ -1,5 +1,5 @@
 import ObjectProxy from '@ember/object/proxy';
-import { merge } from '@ember/polyfills';
+import { assign } from '@ember/polyfills';
 
 /**
  * @class Row
@@ -57,7 +57,7 @@ Row.reopenClass({
    * @static
    */
   create(content, options = {}) {
-    let _options = merge({ content }, options);
+    const _options = assign({ content }, options);
     return this._super(_options);
   }
 });
