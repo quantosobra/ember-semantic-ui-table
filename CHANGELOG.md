@@ -1,5 +1,9 @@
 # Changelog
 
+## 4.0.1 (2019-08-14)
+
+* Replace usage of merge with assign to remove deprecation warning
+
 ## 4.0.0 (2019-07-31)
 
 * [[#124](https://github.com/quantosobra/ember-semantic-ui-table/pull/124)] [BREAKING] Convert native class Table to extend from EmberObject
