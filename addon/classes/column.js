@@ -85,6 +85,7 @@ export default EmberObject.extend({
     },
     set(name, value) {
       this.set('hidden', !value);
+      return value;
     }
   }),
 

@@ -9,6 +9,7 @@ export default Mixin.create({
     if (align) {
       return `${align} aligned`;
     }
+    return '';
   }),
 
   verticalAlignClass: computed('column.align', function() {
@@ -16,5 +17,6 @@ export default Mixin.create({
     if (verticalAlign) {
       return `${verticalAlign} aligned`;
     }
+    return '';
   })
 });
