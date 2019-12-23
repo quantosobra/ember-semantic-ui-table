@@ -1,0 +1,3 @@
+{{#let (get-code-snippet @name) as |snippet|}}
+  {{code-block code=snippet.source language=snippet.language}}
+{{/let}}

@@ -6,7 +6,10 @@ const path = require('path');
 module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
     // Add options here
-    snippetSearchPaths: ['tests/dummy/app']
+    snippetSearchPaths: ['tests/dummy/app'],
+    'ember-prism': {
+      components: ['javascript', 'handlebars', 'markup', 'markup-templating'],
+    },
   });
 
   /*
