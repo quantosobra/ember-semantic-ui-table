@@ -17,9 +17,11 @@ module('Integration | Component | table cell/row index', function(hooks) {
     await render(hbs`{{ui-tbody table=table}}`);
 
     assert.equal(findAll('tr').length, 3);
-    assert.equal(findAll('tr td').length, 3);
-    assert.equal(this.$('tr td').eq(0).text().trim(), '0');
-    assert.equal(this.$('tr td').eq(1).text().trim(), '1');
-    assert.equal(this.$('tr td').eq(2).text().trim(), '2');
+
+    const cells = findAll('tr td');
+    assert.equal(cells.length, 3);
+    assert.equal(cells[0].innerText.trim(), '0');
+    assert.equal(cells[1].innerText.trim(), '1');
+    assert.equal(cells[2].innerText.trim(), '2');
   });
 });
