@@ -46,3 +46,4 @@ jobs:
 
       - name: Run tests
         run: node_modules/.bin/ember try:one ${{ matrix.try_scenario }} --skip-cleanup
+        continue-on-error: ${{ endsWith(matrix.try_scenario, 'beta') || endsWith(matrix.try_scenario, 'canary') }}
