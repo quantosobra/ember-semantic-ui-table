@@ -80,4 +80,4 @@ yarn publish
 This project is developed at [QuantoSobra](https://www.quantosobra.com.br) and licensed under the MIT license.
 See the [LICENSE.md](LICENSE.md) file for the full license text.
 
-QuantoSobra &copy; 2017-2019
+QuantoSobra &copy; 2017-2020
