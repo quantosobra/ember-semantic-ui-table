@@ -13,7 +13,9 @@ jobs:
     name: Lint JS and HBS code
     runs-on: ubuntu-latest
     steps:
-      - uses: mydea/actions-ember-testing@v1
+      - uses: rwjblue/setup-volta@v1
+
+      - uses: mydea/actions-ember-testing@v2
 
       - uses: actions/checkout@v1
 
