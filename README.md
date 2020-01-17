@@ -1,6 +1,6 @@
 # ember-semantic-ui-table
 
-[![Build Status](https://github.com/quantosobra/ember-semantic-ui-table/workflows/CI/badge.svg)](https://github.com/quantosobra/ember-semantic-ui-table/actions?query=workflow%3ACI+branch%3Amaster)
+[![Build Status](https://travis-ci.org/quantosobra/ember-semantic-ui-table.svg)](https://travis-ci.org/quantosobra/ember-semantic-ui-table)
 [![npm version](https://badge.fury.io/js/ember-semantic-ui-table.svg)](http://badge.fury.io/js/ember-semantic-ui-table)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-semantic-ui-table.svg)](http://emberobserver.com/addons/ember-semantic-ui-table)
 [![Code Climate](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table/badges/gpa.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table)
