@@ -4,7 +4,7 @@
 [![npm version](https://badge.fury.io/js/ember-semantic-ui-table.svg)](http://badge.fury.io/js/ember-semantic-ui-table)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-semantic-ui-table.svg)](http://emberobserver.com/addons/ember-semantic-ui-table)
 [![Code Climate](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table/badges/gpa.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table)
-[![Embroider Safe](http://badges.herokuapp.com/travis/quantosobra/ember-semantic-ui-table?branch=master&env=EMBER_TRY_SCENARIO=embroider&label=Embroider+Safe)]
+[![Embroider Safe](http://badges.herokuapp.com/travis/quantosobra/ember-semantic-ui-table?branch=master&env=EMBER_TRY_SCENARIO=embroider&label=Embroider+Safe)](https://travis-ci.org/quantosobra/ember-semantic-ui-table)
 
 ## Features
 
@@ -20,7 +20,7 @@ ember install ember-semantic-ui-table
 
 - Ember.js v2.18 or above
 - Ember CLI v2.13 or above
-- Node.js v8 or above
+- Node.js v10 or above
 
 ## Helpful Links
 
