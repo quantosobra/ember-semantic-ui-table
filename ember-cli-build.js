@@ -1,3 +1,4 @@
+/* eslint-disable node/no-missing-require, node/no-extraneous-require */
 'use strict';
 
 const EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
