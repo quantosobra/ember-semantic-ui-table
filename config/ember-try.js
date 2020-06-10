@@ -58,8 +58,18 @@ module.exports = function() {
               'ember-source': urls[2]
             }
           }
-        }
-      ]
+        },
+        {
+          name: 'embroider',
+          npm: {
+            devDependencies: {
+              '@embroider/core': '*',
+              '@embroider/webpack': '*',
+              '@embroider/compat': '*',
+            },
+          },
+        },
+      ],
     };
   });
 };

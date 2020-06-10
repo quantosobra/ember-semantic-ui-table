@@ -27,5 +27,17 @@ module.exports = function(defaults) {
     app.import(path.join(semanticFontsSource, 'outline-icons' + ext), { destDir: semanticFontsDestination });
   }
 
-  return app.toTree();
+  if ('@embroider/webpack' in app.dependencies()) {
+    const { Webpack } = require('@embroider/webpack');
+    return require('@embroider/compat').compatBuild(app, Webpack, {
+      packagerOptions: {
+        webpackConfig: {
+          devtool: false,
+        },
+      },
+    });
+  }
+  else {
+    return app.toTree();
+  }
 };

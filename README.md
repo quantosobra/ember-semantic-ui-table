@@ -4,6 +4,7 @@
 [![npm version](https://badge.fury.io/js/ember-semantic-ui-table.svg)](http://badge.fury.io/js/ember-semantic-ui-table)
 [![Ember Observer Score](http://emberobserver.com/badges/ember-semantic-ui-table.svg)](http://emberobserver.com/addons/ember-semantic-ui-table)
 [![Code Climate](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table/badges/gpa.svg)](https://codeclimate.com/github/quantosobra/ember-semantic-ui-table)
+[![Embroider Safe](http://badges.herokuapp.com/travis/quantosobra/ember-semantic-ui-table?branch=master&env=EMBER_TRY_SCENARIO=embroider&label=Embroider+Safe)]
 
 ## Features
 
